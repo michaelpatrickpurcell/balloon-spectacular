@@ -1,0 +1,142 @@
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{math}
+
+\usepackage{calc}
+\usepackage{fontspec}
+\usepackage{ifthen}
+\usepackage{contour}
+\contournumber{1024}
+
+\newlength{\cardwidth}
+\newlength{\cardheight}
+\newlength{\bleed}
+\newlength{\horizspace}
+\newlength{\vertspace}
+\newlength{\vertdist}
+\newlength{\horizdist}
+
+\setlength{\cardwidth}{2.5in}
+\setlength{\cardheight}{3.5in}
+\setlength{\bleed}{0.0625in}
+\setlength{\horizspace}{0.0625in}
+\setlength{\horizdist}{\cardwidth + 2\bleed + \horizspace}
+\setlength{\vertspace}{0.0625in}
+\setlength{\vertdist}{\cardheight + 2\bleed + \vertspace}
+
+\tikzset{guidecross/.pic={
+	\draw[#1] (-\bleed,0) -- (\bleed,0);
+	\draw[#1] (0, -\bleed) -- (0, \bleed);
+}}
+
+\tikzset{cutguide/.pic={
+	\pic () at (-\cardwidth/2, \cardheight/2) {guidecross={#1}};
+	\pic () at (\cardwidth/2, \cardheight/2) {guidecross={#1}};
+	\pic () at (-\cardwidth/2, -\cardheight/2) {guidecross={#1}};
+	\pic () at (\cardwidth/2, -\cardheight/2) {guidecross={#1}};
+}}
+
+\tikzset{cardbackpattern/.pic={
+	\foreach \i in {-1.25, -1.0,...,1.25}
+		\foreach \j in {-1.75, -1.5, ..., 1.75}
+			\draw[very thick, #1] (\i,\j) circle (0.105);
+
+	\foreach \i in {-1.375, -1.125, -0.875,...,1.125, 1.375}
+		\foreach \j in {-1.875, -1.625, ..., 1.875}
+			\draw[very thick, #1] (\i,\j) circle (0.105);
+}}
+
+\tikzset{pics/cardfrontpattern/.style 2 args={
+	code={
+		\setmainfont[Scale=6.0]{Roboto Slab}
+		\node (c) at (0, 0) {{\contour{black}{\textcolor{#2}{\Large #1}}}};
+		\node (ul) at (-0.9, 1.4) {{{\tiny\contour{black}{\textcolor{#2}{#1}}}}};
+		\node[transform shape, rotate=180] (lr) at (0.9, -1.4) {{{\tiny\contour{black}{\textcolor{#2}{#1}}}}};
+		
+		\draw[line width=0.35ex, rounded corners=3mm, black] (ul) --++ (1.8, 0) -- (lr);
+		\draw[line width=0.25ex, rounded corners=3mm, #2, shorten >=0.05ex, shorten <=0.05ex] (ul) --++ (1.8, 0) -- (lr);
+
+		\draw[line width=0.35ex, rounded corners=3mm, black] (lr) --++ (-1.8, 0) -- (ul);
+		\draw[line width=0.25ex, rounded corners=3mm, #2, shorten >=0.05ex, shorten <=0.05ex] (lr) --++ (-1.8, 0) -- (ul);
+	}
+}}
+
+%\tikzset{cardfrontpatternunderline/.pic={
+\tikzset{pics/cardfrontpatternunderline/.style 2 args={
+	code={
+		\setmainfont[Scale=6.0]{Roboto Slab}
+		\pic () at (0,0) {cardfrontpattern={#1}{#2}};	
+		\Large
+		\node[fill=black, inner sep = 0pt, minimum width = 0.875ex, minimum height = 0.225ex] () at (0, -0.66) {};
+		\node[fill=#2, inner sep = 0pt, minimum width = 0.8ex, minimum height = 0.15ex] () at (0, -0.66) {};
+
+		\tiny
+		\node[fill=black, inner sep = 0pt, minimum width = 0.9ex, minimum height = 0.25ex] () at (-0.90, 1.4in-1ex) {};
+		\node[fill=#2, inner sep = 0pt, minimum width = 0.8ex, minimum height = 0.15ex] () at (-0.90, 1.4in-1ex) {};
+		
+		\node[fill=black, inner sep = 0pt, minimum width = 0.9ex, minimum height = 0.25ex, rotate=180] () at (0.90, -1.4in+1ex) {};
+		\node[fill=#2, inner sep = 0pt, minimum width = 0.8ex, minimum height = 0.15ex, rotate=180] () at (0.90, -1.4in+1ex) {};
+	}
+}}
+
+\tikzset{cardbackprintable/.pic={
+	\begin{scope}
+	\clip (-\cardwidth/2 - \bleed, 0in) --%
+	      (-\cardwidth/2 - \bleed, \cardheight/2 + \bleed) --%
+	      (\cardwidth/2 + \bleed, \cardheight/2 + \bleed) --%
+	      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
+	      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
+	      cycle;
+	% Pattern for card back
+	\path[fill=SkyBlue!50] (-\cardwidth/2 - \bleed, 0in) --%
+	      (-\cardwidth/2 - \bleed, \cardheight/2 + \bleed) --%
+	      (\cardwidth/2 + \bleed, \cardheight/2 + \bleed) --%
+	      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
+	      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
+	      cycle;
+	\pic () at (0,0) {cardbackpattern={black}};
+	% Cutting guides for corners of the cards	
+	\pic () at (0,0) {cutguide={black}};
+\end{scope}
+}}
+
+
+%\tikzset{cardfrontprintable/.pic={
+\tikzset{cardfrontprintable/.pic={
+		\begin{scope}
+		\clip (-\cardwidth/2 - \bleed, 0in) --%
+		      (-\cardwidth/2 - \bleed, \cardheight/2 + \bleed) --%
+		      (\cardwidth/2 + \bleed, \cardheight/2 + \bleed) --%
+		      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
+		      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
+		      cycle;
+		\fill[SkyBlue!50] (-\cardwidth/2 - \bleed, 0in) --%
+		      (-\cardwidth/2 - \bleed, \cardheight/2 + \bleed) --%
+		      (\cardwidth/2 + \bleed, \cardheight/2 + \bleed) --%
+		      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
+		      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
+		      cycle;
+		% Pattern for card front
+		\node () at (0,0) {\includegraphics[width=2.5in]{#1}};
+		% Cutting guides for corners of the cards	
+		\pic () at (0,0) {cutguide={SkyBlue!50}};
+		\end{scope}
+	}}
+
+%\tikzset{cardfrontunderlineprintable/.pic={
+\tikzset{pics/cardfrontunderlineprintable/.style 2 args={
+	code={
+		\begin{scope}
+		\clip (-\cardwidth/2 - \bleed, 0in) --%
+		      (-\cardwidth/2 - \bleed, \cardheight/2 + \bleed) --%
+		      (\cardwidth/2 + \bleed, \cardheight/2 + \bleed) --%
+		      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
+		      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
+		      cycle;
+		% Pattern for card front
+		\pic () at (0,0) {cardfrontpatternunderline={#1}{#2}};
+		% Cutting guides for corners of the cards	
+		\pic () at (0,0) {cutguide={white}};
+		\end{scope}
+	}
+}}
