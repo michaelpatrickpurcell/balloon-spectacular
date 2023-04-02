@@ -149,6 +149,7 @@
 \pic () at (2\horizdist,0) {cardbackprintable};
 
 \pic () at (\horizdist,-\vertdist) {cardbackprintable};
+
 \end{tikzpicture}	
 \end{center}
 \newpage%
@@ -162,23 +163,39 @@
 \pic () at (\horizdist, -\vertdist) {cardfrontprintable={Images/grid_gw.png}};
 \end{tikzpicture}
 \end{center}
-%\newpage%
-%\phantom{a}
-%\begin{center}
-%\begin{tikzpicture}[x=1in, y=1in]
-%\pic () at (0,0) {cardbackprintable={Red}};
-%\pic () at (\horizdist,0) {cardbackprintable={Goldenrod}};
-%\pic () at (2\horizdist,0) {cardbackprintable={ForestGreen}};
-%\end{tikzpicture}	
-%\end{center}
-%\newpage%
-%\phantom{a}
-%\begin{center}
-%\begin{tikzpicture}[x=1in, y=1in]
-%\pic () at (0,0) {cardfrontprintable={46}{ForestGreen}};
-%\pic () at (\horizdist, 0) {cardfrontprintable={47}{Goldenrod}};
-%\pic () at (2\horizdist, 0) {cardfrontprintable={48}{Red}};
-%\end{tikzpicture}
-%\end{center}
+\newpage%
+\phantom{a}
+\begin{center}
+\begin{tikzpicture}[x=1in, y=1in]
+\pic () at (0,0) {cardbackprintable};
+\pic () at (\horizdist,0) {cardbackprintable};
+\pic () at (2\horizdist,0) {cardbackprintable};
+
+\pic () at (0,-\vertdist) {cardbackprintable2={Images/truck_b.png}};
+\pic () at (2\horizdist,-\vertdist) {cardbackprintable2={Images/truck_b.png}};
+
+\pic () at (0,-2\vertdist) {cardbackprintable2={Images/truck_b.png}};
+\pic () at (\horizdist,-2\vertdist) {cardbackprintable2={Images/truck_b.png}};
+\pic () at (2\horizdist,-2\vertdist) {cardbackprintable2={Images/truck_b.png}};
+
+\end{tikzpicture}	
+\end{center}
+\newpage%
+\phantom{a}
+\begin{center}
+\begin{tikzpicture}[x=1in, y=1in]
+\pic () at (0,0) {cardfrontprintable={Images/lion.png}};
+\pic () at (\horizdist, 0) {cardfrontprintable={Images/wolf.png}};
+\pic () at (2\horizdist, 0) {cardfrontprintable={Images/monkey.png}};
+
+\pic[xscale=-1, transform shape]  () at (0, -\vertdist) {cardfrontprintable2={Images/truck_g.png}};
+\pic[xscale=-1, transform shape] () at (2\horizdist, -\vertdist) {cardfrontprintable2={Images/truck_p.png}};
+
+\pic[xscale=-1, transform shape] () at (0, -2\vertdist) {cardfrontprintable2={Images/truck_r.png}};
+\pic[xscale=-1, transform shape] () at (\horizdist, -2\vertdist) {cardfrontprintable2={Images/truck_w.png}};
+\pic[xscale=-1, transform shape] () at (2\horizdist, -2\vertdist) {cardfrontprintable2={Images/truck_y.png}};
+
+\end{tikzpicture}
+\end{center}
 
 \end{document}

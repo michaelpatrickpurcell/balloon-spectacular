@@ -123,9 +123,7 @@
 		\end{scope}
 	}}
 
-%\tikzset{cardfrontunderlineprintable/.pic={
-\tikzset{pics/cardfrontunderlineprintable/.style 2 args={
-	code={
+\tikzset{cardfrontprintable2/.pic={
 		\begin{scope}
 		\clip (-\cardwidth/2 - \bleed, 0in) --%
 		      (-\cardwidth/2 - \bleed, \cardheight/2 + \bleed) --%
@@ -133,10 +131,36 @@
 		      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
 		      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
 		      cycle;
+		\fill[lightgray!50] (-\cardwidth/2 - \bleed, 0in) --%
+		      (-\cardwidth/2 - \bleed, \cardheight/2 + \bleed) --%
+		      (\cardwidth/2 + \bleed, \cardheight/2 + \bleed) --%
+		      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
+		      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
+		      cycle;
 		% Pattern for card front
-		\pic () at (0,0) {cardfrontpatternunderline={#1}{#2}};
+		\node[rotate=90, transform shape] () at (0,0) {\includegraphics[width=3.5in]{#1}};
 		% Cutting guides for corners of the cards	
-		\pic () at (0,0) {cutguide={white}};
+		\pic () at (0,0) {cutguide={lightgray!50}};
 		\end{scope}
-	}
-}}
+	}}
+
+\tikzset{cardbackprintable2/.pic={
+		\begin{scope}
+		\clip (-\cardwidth/2 - \bleed, 0in) --%
+		      (-\cardwidth/2 - \bleed, \cardheight/2 + \bleed) --%
+		      (\cardwidth/2 + \bleed, \cardheight/2 + \bleed) --%
+		      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
+		      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
+		      cycle;
+		\fill[lightgray!50] (-\cardwidth/2 - \bleed, 0in) --%
+		      (-\cardwidth/2 - \bleed, \cardheight/2 + \bleed) --%
+		      (\cardwidth/2 + \bleed, \cardheight/2 + \bleed) --%
+		      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
+		      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
+		      cycle;
+		% Pattern for card front
+		\node[rotate=90, xscale=-1, transform shape] () at (0,0) {\includegraphics[width=3.5in]{#1}};
+		% Cutting guides for corners of the cards	
+		\pic () at (0,0) {cutguide={black}};
+		\end{scope}
+	}}
