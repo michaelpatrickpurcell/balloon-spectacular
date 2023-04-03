@@ -28,10 +28,10 @@ The number of cards of each type that you will use in your game depends on the h
   4.  If you are playing a cooperative game, shuffle the balloon deck. If you are playing a competitive game, then you should skip this step. 
   5.  Place the balloon deck below the launch zone. The balloon deck should be face up and centered on the launch zone.
   6. Clear the play are above and to the left of the launch zone.
-     - Ensure that there is enough space above the launch zone for at least four rows of cards.
-     - Ensure that there is enough space to the left of the launch zone for at least eight columns of cards.  
+     - Ensure that there is enough space for four rows of cards.
+     - Ensure that there is enough space for twelve columns of cards.  
 
-![Set up for a four-player game.](set_up_diagram.png)
+![Set up for a four-player game.](set_up_diagram.jpg)
 
 ## Gameplay
 On your turn, two things will happen:
