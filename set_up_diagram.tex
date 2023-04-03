@@ -1,0 +1,37 @@
+\documentclass{standalone}
+\usepackage{balloonspectacular}
+
+\tikzset{cardposition/.style={inner sep=0pt, minimum width=2.5in, minimum height=3.5in, draw, very thick, rounded corners = 3mm}}
+
+\tikzset{truckcard/.style={inner sep=0pt, minimum width=3.5in, minimum height=2.5in, draw, very thick, rounded corners = 3mm, xscale=-1, fill=lightgray!50}}
+
+\tikzset{ballooncard/.style={inner sep=0pt, minimum width=2.5in, minimum height=3.5in, draw, very thick, rounded corners = 3mm, xscale=-1, fill=SkyBlue!50}}
+
+
+\begin{document}
+
+\begin{tikzpicture}[x=1in, y=1in]
+\path[fill=white] (-46.25, -11.5) rectangle (2.25, 15.5);
+
+%\path[draw, ultra thick, rounded corners=3mm, fill=YellowGreen!50] (-46.25, -2.75) rectangle (2.25, 15.5);
+
+\node at (-22, 6.375) {\includegraphics[height=18.25in]{Images/play_area_background.png}};
+
+\foreach \x in {0, -4,-8,...,-44}
+ \foreach \y in {0, 4.25, ..., 12.75}
+ {
+	\node[cardposition] at (\x,\y) {};
+	\node[cardposition, white, dashed] at (\x,\y) {};
+ }
+
+\foreach \x in {0, -4, -8, -12} {
+	\node[truckcard] at (\x, -6) {\includegraphics[width=3.25in]{Images/truck_b.png}};
+%	\node[cardposition] at (\x, -5.5) {};
+}
+
+\foreach \x in {-5, -5.25, ..., -6}
+	\node[ballooncard, rotate=90] at (\x, -9.25) {\includegraphics[height=3.25in]{Images/grid_py.png}};
+
+\end{tikzpicture}
+
+\end{document}
