@@ -1,6 +1,7 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage{tikz}
 \usetikzlibrary{math}
+\usetikzlibrary{shapes}
 
 \usepackage{calc}
 \usepackage{fontspec}
@@ -164,3 +165,14 @@
 		\pic () at (0,0) {cutguide={black}};
 		\end{scope}
 	}}
+
+
+\tikzset{cardposition/.style={inner sep=0pt, minimum width=2.5in, minimum height=3.5in, draw, very thick, rounded corners = 3mm}}
+
+\tikzset{truckcard/.style={inner sep=0pt, minimum width=3.5in, minimum height=2.5in, draw, very thick, rounded corners = 3mm, xscale=-1, fill=lightgray!50}}
+
+\tikzset{ballooncard/.style={inner sep=0pt, minimum width=2.5in, minimum height=3.5in, draw, very thick, rounded corners = 3mm, xscale=-1, fill=SkyBlue!50}}
+
+\tikzset{nextarrow/.pic={
+	\node[draw, single arrow, ultra thick, fill=black, inner sep=0pt, minimum height=1.25in, minimum width=1in] () at (0,0) {\phantom{M}};
+}}

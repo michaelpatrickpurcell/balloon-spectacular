@@ -61,8 +61,16 @@ If any balloons are flying, then after you advance a balloon the wind will blow.
 
 To apply the wind, you will do one of the following:
   - If the truck cards are in adjacent columns and the balloon deck is centered on the launch zone (e.g. the starting position), then you should move the leftmost truck one column to the left.
+
+  ![The wind blows when the trucks are in a single group and the baloon deck is centered on the launch zone.](wind_diagram_1.jpg)
+
   - If the truck cards are not in adjacent columns, then the truck cards will be in two groups which are separated by one empty column. You should slide the leftmost truck from the second group one column to the left. It should then be the rightmost truck in the first group.
+
+  ![The wind blows when the trucks are in two groups.](wind_diagram_2.jpg)
+
   - If all of the truck cards are in adjacent rows, but the balloon deck is not centered on the launch zone (e.g. after each of the truck cards has been moved one time), then you should slide the balloon deck one position to the left so that it is centered on the launch zone.
+
+  ![The wind blows when the trucks are in a single group and the baloon deck is not centered on the launch zone.](wind_diagram_3.jpg)
 
 If the wind blowing would cause any of the trucks to move beyond the play area, the game should end immediately.
 

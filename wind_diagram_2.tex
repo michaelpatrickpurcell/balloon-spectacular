@@ -1,0 +1,17 @@
+\documentclass{standalone}
+
+\usepackage{balloonspectacular}
+
+\begin{document}
+\begin{tikzpicture}[x=1in, y=1in]
+\foreach \x in {-4, 4, 8, 12}
+\node[truckcard] at (\x,0) {\includegraphics[width=3.25in]{Images/truck_b.png}};
+\node[cardposition, rotate=90] at (0, 0) {};
+\foreach \x in {7, 6.75, ..., 6}
+	\node[ballooncard, rotate=90] at (\x, -3.5) {\includegraphics[height=3.25in]{Images/grid_py.png}};
+
+
+\pic[rotate=180, transform shape, anchor=west] at (2.375, 0) {nextarrow};
+
+\end{tikzpicture}
+\end{document}
