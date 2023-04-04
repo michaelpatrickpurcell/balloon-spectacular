@@ -73,6 +73,7 @@ To apply the wind, you will do one of the following:
 
   ![The wind blows when the trucks are in a single group and the baloon deck is not centered on the launch zone.](wind_diagram_3.jpg)
 
+Note that any balloon cards that have been placed on a truck card (i.e. that are in the unpacked or inflated states) that moves as a result of the wind blowing should be moved as well.
 
 ## Scoring
 After the game ends, you should compute your score.
