@@ -59,6 +59,7 @@ To advance a balloon, you move a balloon from its current state to the next.
 ### The Wind Blows
 If any balloons are flying, then after you advance a balloon the wind will blow. The wind always blows from the left to right over the launch zone and it changes the position of balloons that are flying relative to the launch zone. Rather than move the balloons which are flying, however, you will move the launch zone in the opposite direction of the wind (from right to left) to model this effect.
 
+
 To apply the wind, you will do one of the following:
   - If the truck cards are in adjacent columns and the balloon deck is centered on the launch zone (e.g. the starting position), then you should move the leftmost truck one column to the left.
 
@@ -72,7 +73,6 @@ To apply the wind, you will do one of the following:
 
   ![The wind blows when the trucks are in a single group and the baloon deck is not centered on the launch zone.](wind_diagram_3.jpg)
 
-If the wind blowing would cause any of the trucks to move beyond the play area, the game should end immediately.
 
 ## Scoring
 After the game ends, you should compute your score.
