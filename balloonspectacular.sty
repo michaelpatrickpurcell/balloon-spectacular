@@ -2,6 +2,7 @@
 \usepackage{tikz}
 \usetikzlibrary{math}
 \usetikzlibrary{shapes}
+\usetikzlibrary{calc}
 
 \usepackage{calc}
 \usepackage{fontspec}
@@ -25,6 +26,23 @@
 \setlength{\vertspace}{0.0625in}
 \setlength{\vertdist}{\cardheight + 2\bleed + \vertspace}
 
+\newlength{\smallcardwidth}
+\newlength{\smallcardheight}
+\newlength{\smallbleed}
+\newlength{\smallhorizspace}
+\newlength{\smallvertspace}
+\newlength{\smallvertdist}
+\newlength{\smallhorizdist}
+
+\setlength{\smallcardwidth}{45mm}
+\setlength{\smallcardheight}{63.5mm}
+\setlength{\smallbleed}{0.0mm}
+\setlength{\smallhorizspace}{0.0mm}
+\setlength{\smallhorizdist}{\smallcardwidth + 2\smallbleed + \smallhorizspace}
+\setlength{\smallvertspace}{0.0mm}
+\setlength{\smallvertdist}{\smallcardheight + 2\smallbleed + \smallvertspace}
+
+
 \tikzset{guidecross/.pic={
 	\draw[#1] (-\bleed,0) -- (\bleed,0);
 	\draw[#1] (0, -\bleed) -- (0, \bleed);
@@ -36,6 +54,14 @@
 	\pic () at (-\cardwidth/2, -\cardheight/2) {guidecross={#1}};
 	\pic () at (\cardwidth/2, -\cardheight/2) {guidecross={#1}};
 }}
+
+\tikzset{smallcutguide/.pic={
+	\pic () at (-\smallcardwidth/2, \smallcardheight/2) {guidecross={#1}};
+	\pic () at (\smallcardwidth/2, \smallcardheight/2) {guidecross={#1}};
+	\pic () at (-\smallcardwidth/2, -\smallcardheight/2) {guidecross={#1}};
+	\pic () at (\smallcardwidth/2, -\smallcardheight/2) {guidecross={#1}};
+}}
+
 
 \tikzset{cardbackpattern/.pic={
 	\foreach \i in {-1.25, -1.0,...,1.25}
@@ -176,3 +202,90 @@
 \tikzset{nextarrow/.pic={
 	\node[draw, single arrow, ultra thick, fill=black, inner sep=0pt, minimum height=1.25in, minimum width=1in] () at (0,0) {\phantom{M}};
 }}
+
+\tikzset{smallcardposition/.style={inner sep=0pt, minimum width=45mm, minimum height=63.5mm, draw, line width=0.5mm, rounded corners = 3mm}}
+
+\tikzset{smallcardbackpattern/.pic={
+	\foreach \i in {-1.25in, -1.0in,...,1.25in}
+		\foreach \j in {-0.875in, -0.625in, ..., 0.875in}
+			\draw[very thick, red] (\i,\j) circle (0.105in);
+
+	\foreach \i in {-1.375, -1.125, -0.875,...,1.125, 1.375}
+		\foreach \j in {-1.875, -1.625, ..., 1.875}
+			\draw[very thick, #1] (\i,\j) circle (0.105);
+}}
+
+\definecolor{PinkSky}{HTML}{FFE0B6}
+\definecolor{BlueSky}{HTML}{ACC2E5}
+\definecolor{RoadBrown}{HTML}{CDB481}
+\definecolor{GrassGreen}{HTML}{75B556}
+
+\tikzset{pics/smallcardfrontprintable/.style 2 args={
+	code={
+		\begin{scope}
+		\clip (-\smallcardwidth/2 - \smallbleed, 0in) --%
+		      (-\smallcardwidth/2 - \smallbleed, \smallcardheight/2 + \smallbleed) --%
+		      (\smallcardwidth/2 + \smallbleed, \smallcardheight/2 + \smallbleed) --%
+		      (\smallcardwidth/2 + \smallbleed, -\smallcardheight/2 - \smallbleed) --%
+		      (-\smallcardwidth/2 - \smallbleed, -\smallcardheight/2 - \smallbleed) --%
+		      cycle;
+
+		% Pattern for card front
+%		\node () at (0,0) {\includegraphics[width=\smallcardwidth]{Images/background_clouds.png}};
+
+		\node () at (0,0) {\includegraphics[width=#2\smallcardwidth]{#1}};
+		\end{scope}
+		% Cutting guides for corners of the cards	
+		\pic () at (0,0) {smallcutguide={black}};
+
+}}}
+\tikzset{smallcardfrontprintable2/.pic={
+		\begin{scope}
+		\clip (-\smallcardheight/2 - \smallbleed, 0in) --%
+		      (-\smallcardheight/2 - \smallbleed, \smallcardwidth/2 + \smallbleed) --%
+		      (\smallcardheight/2 + \smallbleed, \smallcardwidth/2 + \smallbleed) --%
+		      (\smallcardheight/2 + \smallbleed, -\smallcardwidth/2 - \smallbleed) --%
+		      (-\smallcardheight/2 - \smallbleed, -\smallcardwidth/2 - \smallbleed) --%
+		      cycle;
+		% Pattern for card front
+		\foreach \x in {-1.25in, -1.0in, -0.75in, -0.5in, -0.25in, 0in, 0.25in, 0.5in, 0.75in, 1.0in, 1.25in}
+		\foreach \y in {-1.0in, -0.75in,-0.5in, -0.25in, 0in, 0.25in, 0.5in, 0.75in, 1.0in}
+		    \draw[very thick] (\x,\y) circle (0.105in);
+		\foreach \x in {-1.125in, -0.875in, -0.625in, -0.375in, -0.125in,0.125in, 0.375in, 0.625in, 0.875in, 1.125in}
+		\foreach \y in {-0.875in, -0.625in,-0.375in, -0.125in, 0.125in, 0.375in, 0.625in, 0.875in}
+		    \draw[very thick] (\x,\y) circle (0.105in);
+   
+		\node [fill=white, inner sep=0pt, rounded corners=15mm]() at (0,0) {\includegraphics[width=0.8\smallcardheight]{#1}};
+		% Cutting guides for corners of the cards	
+		\pic[rotate=90] () at (0,0) {smallcutguide={black}};
+		\end{scope}
+	}}
+
+\tikzset{pics/smallcardbackprintable/.style 2 args={
+	code={
+		\begin{scope}
+		\clip (-\smallcardwidth/2 - \smallbleed, 0in) --%
+		      (-\smallcardwidth/2 - \smallbleed, \smallcardheight/2 + \smallbleed) --%
+		      (\smallcardwidth/2 + \smallbleed, \smallcardheight/2 + \smallbleed) --%
+		      (\smallcardwidth/2 + \smallbleed, -\smallcardheight/2 - \smallbleed) --%
+		      (-\smallcardwidth/2 - \smallbleed, -\smallcardheight/2 - \smallbleed) --%
+		      cycle;
+
+		% Pattern for card front
+		\node () at (0,0) {\includegraphics[width=\smallcardwidth]{Images/background_clouds.png}};
+
+		\node () at (0,0) {\includegraphics[width=#2\smallcardwidth]{#1}};
+		% Cutting guides for corners of the cards	
+		\end{scope}
+		\pic () at (0,0) {smallcutguide={white}};
+
+	}}}
+\tikzset{smallcardbackprintable2/.pic={
+		\begin{scope}
+		% Pattern for card front
+		\node () at (0,0) {\includegraphics[width=\smallcardheight]{#1}};
+		% Cutting guides for corners of the cards	
+		\pic[rotate=90] () at (0,0) {smallcutguide={white}};
+		\end{scope}
+	}}
+

@@ -1,0 +1,14 @@
+\documentclass{standalone}
+\usepackage{balloonspectacular}
+
+\begin{document}
+\begin{tikzpicture}
+\node[anchor=south west, inner sep=0pt] at (0,0) {\includegraphics[width=210mm]{Images/game_board_background_4.png}};
+
+\foreach \x in {12.5mm, 82.5mm, 152.5mm}
+\foreach \y in {8mm, 80.5mm, 153mm, 225.5mm}
+{
+  \node[smallcardposition, anchor=south west, white] at (\x,\y) {};
+}
+\end{tikzpicture}
+\end{document}
