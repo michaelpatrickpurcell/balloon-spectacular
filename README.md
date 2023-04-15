@@ -17,12 +17,12 @@ During the game, you will launch a flight of hot-air balloons. You can play eith
 
 The number of cards of each type that you will use in your game depends on the how many people are playing. See the table below for details. Notice that you will always use all of the regular balloon cards but, unless you are playing a five-player game, you will not use all of the special shape cards, truck cards, or colour cards.
 
-| Player Count | 1 | 2 | 3 | 4| 5 |
-| ----------: | ---: | ---: | ---: | ---: | ---: |
-| Regular Balloon Cards | 10 | 10 | 10 | 10 | 10 |
-| Special Shape Cards | 2 | 2 | 2 | 2 | 3 |
-| Truck Cards | 5 | 5 | 5 | 5 | 6 |
-| Colour Cards | 5 | 5 | 5 | 5 | 5 | 
+| Player Count | 1 - 4 | 5 |
+| ----------: | ---: | ---: |
+| Regular Balloon Cards | 10 | 10 |
+| Special Shape Cards | 2 | 3 |
+| Truck Cards | 5 | 6 |
+| Colour Cards | 5 | 5 | 
 
 
 ## Set Up
