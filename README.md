@@ -10,7 +10,8 @@ During the game, you will launch a flight of hot-air balloons. You can play eith
   - 13 balloon cards
      - 10 regular balloon cards
      - 3 special shape cards
-  - 5 truck cards
+  - 13 scoring tokens
+  - 6 truck cards
   - 5 colour cards
   - 1 game board
 
@@ -18,16 +19,17 @@ The number of cards of each type that you will use in your game depends on the h
 
 | Player Count | 1 | 2 | 3 | 4| 5 |
 | ----------: | ---: | ---: | ---: | ---: | ---: |
-| Regular Balloon Cards | 10 | 10 | 10 | 10 | 10
-| Special Shape Cards | 2 | 0 | 1 | 2 | 3 |
-| Truck Cards | 4 | 4 | 4 | 4 | 5 |
-| Colour Cards | 0 | 2 | 3| 4| 5| 
+| Regular Balloon Cards | 10 | 10 | 10 | 10 | 10 |
+| Special Shape Cards | 2 | 2 | 2 | 2 | 3 |
+| Truck Cards | 5 | 5 | 5 | 5 | 6 |
+| Colour Cards | 5 | 5 | 5 | 5 | 5 | 
 
 
 ## Set Up
   1. If you are playing a competitive game, deal one colour card at random to each player. Your colour card will determine the colour of balloons with which you are _affiliated_. Do not reveal this card to the other players until the end of the game. If you are playing a cooperative game, then you should skip this step.
      - Each regular balloon card is affiliated with two of the five possible colours.  The colours that a balloon card is affiliated with are the colours of the envelope of the balloon depicted on that card. Special shape cards are not affiliated with any colour. 
-  2.  Place the truck cards in a single row below the right-hand side of the game board. These cards will comprise the _launch zone_.
+  2.  Set one truck card aside. Place the remaining truck cards in a single row below the left-hand side of the game board. These truck cards comprise the _launch zone_.
+  3. Place the truck card that you set aside in the previous set below the middle of the launch zone. This truck card is the _safety vehicle_.
   3.  Collect the regular balloon cards and special shape cards that you will use during your game (see Components above for details). These cards will comprise the _balloon deck_.
   4.  If you are playing a cooperative game, shuffle the balloon deck. If you are playing a competitive game, then you should skip this step. 
   5.  Place the balloon deck below the launch zone. The balloon deck should be face up and centered on the launch zone.
@@ -35,20 +37,20 @@ The number of cards of each type that you will use in your game depends on the h
 ![Set up for a four-player game.](set_up_diagram.jpg)
 
 ## Gameplay
-On your turn, two things will happen:
-  1. You will advance one balloon.
-  2. If any balloons are flying, the wind blows.
+On your turn, you will perform two actions:
+  1. Advance a balloon.
+  2. If at least one balloon is flying, move a truck.
 
-The game ends when all of the balloons are flying or when the all of the truck cards have moved past the leftmost column of the play area.
+The game ends when all of the balloons are flying or when a truck card has moved past the rightmost column of the tableau.
 
 ### Advance a Balloon
 Throughout the game, each balloon will progress through a series of states: packed, unpacked, inflated, and flying at various altitudes. On your turn, you can advance any one balloon of your choice. If you cannot advance any of the balloons, then you should skip this step.
 
 To advance a balloon, you move a balloon from its current state to the next. 
   - All balloons begin in the packed state. All balloons in the packed state should be in the balloon deck.
-  - To advance a balloon from the packed state to the unpacked state, you should remove it from the balloon deck and place it horizontally on one of the truck cards.
-     - In a cooperative game, you may only advance the first balloon (top card) in the balloon deck.
-     - In a competitive game, you may advance any balloon in the balloon deck.
+  - To advance a balloon from the packed state to the unpacked state, you should remove it from the balloon deck and place it horizontally on one of the truck cards in the lauch zone. You may not place a balloon on the safety vehicle.
+     - In a cooperative game, you may only unpack the first balloon (top card of the balloon deck) which is in the packed state.
+     - In a competitive game, you may unpack any balloon which is in the packed state.
 - To advance a balloon from the unpacked state to the inflated state, you should turn it so that it placed vertically on its truck card.
 - To advance a balloon from the inflated state to the flying state, you should slide it into the bottom row of the play area directly above its truck card. It will then be flying at an altitude of one.
    - Balloons that are flying (at any altitude) may never be orthogonally adjacent to another balloon which is flying.
@@ -57,36 +59,36 @@ To advance a balloon, you move a balloon from its current state to the next.
    - The maximum altitude at which balloons can fly is four.
    - Balloons never descend (decrease their altitude) or move horizontally. 
 
-### The Wind Blows
-If any balloons are flying, then after you advance a balloon the wind will blow. The wind always blows from the left to right over the launch zone and it changes the position of balloons that are flying relative to the launch zone. Rather than move the balloons which are flying, however, you will move the launch zone from right to left (in the opposite direction of the wind) to model this effect.
+### Move a Truck
+If any balloons are flying, then after you advance a balloon you will move a truck. Trucks always move from left to right. The game ends when the lead truck moves past the rightmost column of the tableau.
 
 When the wind blows, you will do one of the following:
-  - If the truck cards are in adjacent columns and the balloon deck is centered on the launch zone (e.g. the starting position), or if there are no cards remaining in the balloon deck, then you should move the leftmost truck one column to the left.
+  - If the truck cards are in adjacent columns and the safety vehicle is centered on the launch zone (e.g. the starting position), or if there are no cards remaining in the balloon deck, then you should move the rightmost truck one column to the right.
 
   ![The wind blows when the trucks are in a single group and the baloon deck is centered on the launch zone.](wind_diagram_1.jpg)
 
-  - If the truck cards are not in adjacent columns, then the truck cards will be in two groups which are separated by one empty column. You should slide the leftmost truck from the second group one column to the left. It should then be the rightmost truck in the first group.
+  - If the truck cards are not in adjacent columns, then the truck cards will be in two groups which are separated by one empty column. You should slide the rightmost truck from the first group one column to the right. It should then be the leftmost truck in the second group.
 
   ![The wind blows when the trucks are in two groups.](wind_diagram_2.jpg)
 
-  - If all of the truck cards are in adjacent rows, but the balloon deck is not centered on the launch zone (e.g. after each of the truck cards has been moved one time), then you should slide the balloon deck one position to the left so that it is centered on the launch zone.
+  - If all of the truck cards are in adjacent rows, but the safety vehicle is not centered on the launch zone (e.g. after each of the truck cards has been moved one time), then you should slide the safety vehicle one position to the right so that it is centered on the launch zone.
 
   ![The wind blows when the trucks are in a single group and the baloon deck is not centered on the launch zone.](wind_diagram_3.jpg)
 
-__Note:__ Any balloon cards that have been placed on a truck card (i.e. that are in the unpacked or inflated states) that moves when the wind blows should be moved as well. 
+__Note:__ Any balloon cards that have been placed on a truck card (i.e. balloons that are in the unpacked or inflated states) should accompany that truck card if/when it moves. 
 
 ## Scoring
 After the game ends, you should compute your score.
 
 ### Cooperative Game
-In a cooperative game, your score is number of adjacent columns required to contain the formation (i.e. the width of the formation) when all of the balloons are flying. If you were unable to launch all of the balloons during the game, your score is equal to the width of the formation plus the number of balloons that you were unable to launch. Your objective is to minimize your score.
+In a cooperative game, your score is number of adjacent columns required to contain the formation (i.e. the width of the formation) when all of the balloons are flying. If you were unable to launch all of the balloons during the game, your score is equal to the width of the formation plus two times the number of balloons that you were unable to launch. Your objective is to minimize your score.
 
 ### Competitive Game
 In a competitive game, each balloon scores a number of points that is determined by its position within the formation. In general, balloons that are flying at higher altitudes score more points than those that are flying at lower alititudes.  If balloons are flying at the same altitude, then the balloons that are closer to the front (right-hand side) of the formation score more points than the balloons that are closer to the back (left-hand side) of the formation. 
 
-More precisely, each balloon scores a number of points equal to one plus the number of balloons flying at a lower altitude than itself plus the number of balloons flying at the same altitude as itself but behind it (to the left) in the formation.
+More precisely, each balloon scores a number of points equal to one plus the number of balloons flying at a lower altitude than itself plus the number of balloons flying at the same altitude as itself but behind it (to the left) in the formation. You should use the scoring tokens to indicate how many points each balloon scores.
 
 For example, the leftmost balloon in the bottom row of the formation always scores one point while the rightmost balloon in the top row of the formation scores one point for every balloon that is flying at the end of the game.  
 
-Your score is the sum of the scores for all of the balloons with which you are affiliated. You should reveal your colour card when you announce your score so that everyone can verify that the required computations have been performed correctly. The player with the highest score wins.
+Your score is the sum of the scores for all of the balloons with which you are affiliated. You should reveal your colour card when you announce your score so that everyone can verify that the required computations have been performed correctly. The player with the highest score wins the game.
 
