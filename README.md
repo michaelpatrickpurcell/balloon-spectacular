@@ -32,7 +32,7 @@ The number of cards of each type that you will use in your game depends on the h
   3. Place the truck card that you set aside in the previous set below the middle of the launch zone. This truck card is the _safety vehicle_.
   3.  Collect the regular balloon cards and special shape cards that you will use during your game (see Components above for details). These cards will comprise the _balloon deck_.
   4.  If you are playing a cooperative game, shuffle the balloon deck. If you are playing a competitive game, then you should skip this step. 
-  5.  Place the balloon deck below the launch zone. In a competitive game, you should spread the balloon cards on the table so that they are all visible throughout the game.
+  5.  Place the balloon deck below the launch zone. In a competitive game, you should spread the balloon cards on the table so that they are all visible.
 
 ![Set up for a four-player game.](set_up_diagram.jpg)
 
