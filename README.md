@@ -15,14 +15,15 @@ During the game, you will launch a flight of hot-air balloons. You can play eith
   - 5 colour cards
   - 1 game board
 
-The number of cards of each type that you will use in your game depends on the how many people are playing. See the table below for details. Notice that you will always use all of the regular balloon cards but, unless you are playing a five-player game, you will not use all of the special shape cards, truck cards, or colour cards.
+The number of special shape cards, truck cards, and scoring tokens that you will use in your game depends on how many people are playing. See the table below for details. Notice that you will always use all of the regular balloon cards but, unless you are playing a five-player game, you will not use all of the special shape cards, truck cards, or scoring tokens. If you are playing with less than five players, you should use the scoring tokens numbered 1-12.
 
 | Player Count | 1 - 4 | 5 |
 | ----------: | ---: | ---: |
 | Regular Balloon Cards | 10 | 10 |
 | Special Shape Cards | 2 | 3 |
 | Truck Cards | 5 | 6 |
-| Colour Cards | 5 | 5 | 
+| Colour Cards | 5 | 5 |
+| Scoring Tokens | 12 | 12 | 
 
 
 ## Set Up

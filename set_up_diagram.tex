@@ -4,7 +4,7 @@
 \begin{document}
 
 \begin{tikzpicture}[x=1in, y=1in]
-\path[fill=white] (-46.25, -11.5) rectangle (2.25, 15.5);
+\path[fill=white] (-47.25, -11.5) rectangle (3.25, 15.5);
 
 %\path[draw, ultra thick, rounded corners=3mm, fill=YellowGreen!50] (-46.25, -2.75) rectangle (2.25, 15.5);
 
@@ -35,6 +35,12 @@
 %	\node[ballooncard, rotate=90] at (\x, -9.25) {\includegraphics[height=3.25in]{Images/grid_py.png}};
 \node[truckcard] at (-38, -9.25) {\includegraphics[width=3.25in]{Images/truck_b.png}};	
 %	\node[inner sep=1.5in] at (-22, 21) {{\setmainfont[Scale=12.0]{Oi}\Huge Aloft}};
+
+\foreach \i/\j in {-44/diag_wy.png, -40/grid_rw.png, -36/horiz_pr.png, -32/vert_gy.png, -28/vert_pw.png, -24/diag_gp.png,            -20/vert_ry.png, -16/grid_py.png, -12/horiz_gw.png, -8/diag_gr.png, -4/lion.png, 0/wolf.png}
+\node[cardposition, rotate=90] at (\i, -14) {\includegraphics[height=3.25in]{Images/\j}};
+
+\foreach \i/\j/\k in {-3.5/-8.5/scoring_token_1.png, -2/-8.5/scoring_token_2.png, -0.5/-8.5/scoring_token_3.png,1/-8.5/scoring_token_4.png, -3.5/-10/scoring_token_5.png, -2/-10/scoring_token_6.png, -0.5/-10/scoring_token_7.png,1/-10/scoring_token_8.png, -3.5/-11.5/scoring_token_9.png, -2/-11.5/scoring_token_10.png, -0.5/-11.5/scoring_token_11.png,1/-11.5/scoring_token_12.png}
+\node at (\i,\j) {\includegraphics[width=25mm]{Images/\k}};
 
 \end{tikzpicture}
 
