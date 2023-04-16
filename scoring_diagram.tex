@@ -1,0 +1,55 @@
+\documentclass{standalone}
+\usepackage{balloonspectacular}
+
+\begin{document}
+
+\begin{tikzpicture}[x=1in, y=1in]
+
+\node at (-22, 6.375) {\includegraphics[height=18.25in]{Images/play_area_background.png}};
+
+\foreach \x in {0, -4,-8,...,-44}
+ \foreach \y in {0, 4.25, ..., 12.75}
+ {
+	\node[cardposition, white] at (\x,\y) {};
+ }
+
+
+\node[cardposition] at (-44, 8.5) {\includegraphics[height=3.25in]{Images/diag_gr.png}};
+\node[circle] at (-44.75,7.25) {\includegraphics[width=25mm]{Images/scoring_token_5.png}};
+
+\node[cardposition] at (-40, 12.75) {\includegraphics[height=3.25in]{Images/grid_py.png}};
+\node[circle] at (-40.75,11.5) {\includegraphics[width=25mm]{Images/scoring_token_9.png}};
+
+\node[cardposition] at (-36, 4.25) {\includegraphics[height=3.25in]{Images/diag_wy.png}};
+\node[circle] at (-36.75,3) {\includegraphics[width=25mm]{Images/scoring_token_2.png}};
+
+\node[cardposition] at (-32, 8.5) {\includegraphics[height=3.25in]{Images/lion.png}};
+\node[circle] at (-32.75,7.25) {\includegraphics[width=25mm]{Images/scoring_token_6.png}};
+
+\node[cardposition] at (-28, 0) {\includegraphics[height=3.25in]{Images/vert_pw.png}};
+\node[circle] at (-28.75,-1.25) {\includegraphics[width=25mm]{Images/scoring_token_1.png}};
+
+\node[cardposition] at (-28, 12.75) {\includegraphics[height=3.25in]{Images/vert_gy.png}};
+\node[circle] at (-28.75,11.5) {\includegraphics[width=25mm]{Images/scoring_token_10.png}};
+
+\node[cardposition] at (-24, 8.5) {\includegraphics[height=3.25in]{Images/horiz_pr.png}};
+\node[circle] at (-24.75,7.25) {\includegraphics[width=25mm]{Images/scoring_token_7.png}};
+
+\node[cardposition] at (-20, 12.75) {\includegraphics[height=3.25in]{Images/wolf.png}};
+\node[circle] at (-20.75,11.5) {\includegraphics[width=25mm]{Images/scoring_token_11.png}};
+
+\node[cardposition] at (-20, 4.25) {\includegraphics[height=3.25in]{Images/horiz_gw.png}};
+\node[circle] at (-20.75,3) {\includegraphics[width=25mm]{Images/scoring_token_3.png}};
+
+\node[cardposition] at (-12, 4.25) {\includegraphics[height=3.25in]{Images/vert_ry.png}};
+\node[circle] at (-12.75,3) {\includegraphics[width=25mm]{Images/scoring_token_4.png}};
+
+\node[cardposition] at (-12, 12.75) {\includegraphics[height=3.25in]{Images/grid_rw.png}};
+\node[circle] at (-12.75,11.5) {\includegraphics[width=25mm]{Images/scoring_token_12.png}};
+
+\node[cardposition] at (-8, 8.5) {\includegraphics[height=3.25in]{Images/diag_gp.png}};
+\node[circle] at (-8.75,7.25) {\includegraphics[width=25mm]{Images/scoring_token_8.png}};
+
+\end{tikzpicture}
+
+\end{document}

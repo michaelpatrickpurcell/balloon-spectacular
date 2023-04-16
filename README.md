@@ -94,3 +94,5 @@ For example, the leftmost balloon in the bottom row of the formation always scor
 
 Your score is the sum of the scores for all of the balloons with which you are affiliated. You should reveal your colour card when you announce your score so that everyone can verify that the required computations have been performed correctly. The player with the highest score wins the game.
 
+![Scores for each balloon at the end of a hypothetical game](scoring_diagram.jpg)
+
