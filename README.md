@@ -28,12 +28,12 @@ The number of cards of each type that you will use in your game depends on the h
 ## Set Up
   1. If you are playing a competitive game, deal one colour card at random to each player. Your colour card will determine the colour of balloons with which you are _affiliated_. Do not reveal this card to the other players until the end of the game. If you are playing a cooperative game, then you should skip this step.
      - Each regular balloon card is affiliated with two of the five possible colours.  The colours that a balloon card is affiliated with are the colours of the envelope of the balloon depicted on that card. Special shape cards are not affiliated with any colour. 
-  2.  Set one truck card aside. Place the remaining truck cards in a single row below the left-hand side of the game board. These truck cards comprise the _launch zone_. The rightmost truck card in the launch zone is called the _lead truck_.
+  2.  Collect the truck cards that you will use during your game. Set one truck card aside. Place the remaining truck cards in a single row below the left-hand side of the game board. These truck cards comprise the _launch zone_. The rightmost truck card in the launch zone is called the _lead truck_.
   3. Place the truck card that you set aside in the previous set below the middle of the launch zone. This truck card is the _safety vehicle_.
-  3.  Collect the regular balloon cards and special shape cards that you will use during your game (see Components above for details). These cards will comprise the _balloon deck_.
-  4.  If you are playing a cooperative game, shuffle the balloon deck. If you are playing a competitive game, then you should skip this step. 
-  5.  Place the balloon deck below the launch zone. In a competitive game, you should spread the balloon cards on the table so that they are all visible.
-
+  4.  Collect the regular balloon cards and special shape cards that you will use during your game (see Components above for details). These cards will comprise the _balloon deck_.
+  5.  If you are playing a cooperative game, shuffle the balloon deck. If you are playing a competitive game, then you should skip this step. 
+  6.  Place the balloon deck below the launch zone. In a competitive game, you should spread the balloon cards on the table so that they are all visible.
+  7. Place the scoring tokens below the play area.
 ![Set up for a four-player game.](set_up_diagram.jpg)
 
 ## Gameplay
