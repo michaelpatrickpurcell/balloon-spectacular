@@ -23,7 +23,7 @@ The number of special shape cards, truck cards, and scoring tokens that you will
 | Special Shape Cards | 2 | 3 |
 | Truck Cards | 5 | 6 |
 | Colour Cards | 5 | 5 |
-| Scoring Tokens | 12 | 12 | 
+| Scoring Tokens | 12 | 13 | 
 
 
 ## Set Up
