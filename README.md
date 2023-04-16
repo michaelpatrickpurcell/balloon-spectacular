@@ -82,7 +82,7 @@ __Note:__ Any balloon cards that are in the launch zone (i.e. balloons that are 
 After the game ends, you should compute your score.
 
 ### Cooperative Game
-In a cooperative game, your score is number of adjacent columns required to contain the formation (i.e. the width of the formation) when all of the balloons are flying. If you were unable to launch all of the balloons during the game, your score is equal to the width of the formation plus two times the number of balloons that you were unable to launch. Your objective is to minimize your score.
+In a cooperative game, your score is the width of the formation (i.e. the number of adjacent columns required to contain all of the balloons that are flying), plus a three-point penalty for each balloon that you failed to launch during the game. Your objective is to minimize your score.
 
 ### Competitive Game
 In a competitive game, each balloon scores a number of points that is determined by its position within the formation. In general, balloons that are flying at higher altitudes score more points than those that are flying at lower alititudes.  If balloons are flying at the same altitude, then the balloons that are closer to the front (right-hand side) of the formation score more points than the balloons that are closer to the back (left-hand side) of the formation. 
