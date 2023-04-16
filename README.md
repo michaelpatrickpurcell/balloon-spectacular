@@ -37,7 +37,7 @@ The number of cards of each type that you will use in your game depends on the h
 ![Set up for a four-player game.](set_up_diagram.jpg)
 
 ## Gameplay
-On your turn, you will perform two actions:
+On your turn, you will perform either one or two actions:
   1. If at least one balloon is flying, move a truck.
   2. Advance a balloon.
 
