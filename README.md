@@ -30,8 +30,8 @@ The number of special shape cards, truck cards, and scoring tokens that you will
   1. If you are playing a competitive game, deal one colour card at random to each player. Your colour card will determine the colour of balloons with which you are _affiliated_. Do not reveal this card to the other players until the end of the game. If you are playing a cooperative game, then you should skip this step.
      - Each regular balloon card is affiliated with two of the five possible colours.  The colours that a balloon card is affiliated with are the colours of the envelope of the balloon depicted on that card. Special shape cards are not affiliated with any colour. 
   2.  Collect the truck cards that you will use during your game. Set one truck card aside. Place the remaining truck cards in a single row below the left-hand side of the game board. These truck cards comprise the _launch zone_. The rightmost truck card in the launch zone is called the _lead truck_.
-  3. Place the truck card that you set aside in the previous set below the middle of the launch zone. This truck card is the _safety vehicle_.
-  4.  Collect the regular balloon cards and special shape cards that you will use during your game (see Components above for details). These cards will comprise the _balloon deck_.
+  3. Collect the truck card that you set aside in the previous step. Place it below the middle of the launch zone. This truck card is the _safety vehicle_.
+  4.  Collect the regular balloon cards and special shape cards that you will use during your game. These cards will comprise the _balloon deck_.
   5.  If you are playing a cooperative game, shuffle the balloon deck. If you are playing a competitive game, then you should skip this step. 
   6.  Place the balloon deck below the launch zone. In a competitive game, you should spread the balloon cards on the table so that they are all visible.
   7. Place the scoring tokens below the play area.
@@ -65,7 +65,7 @@ To advance a balloon, you move a balloon from its current state to the next.
 If any balloons are flying, then before you advance a balloon you will move a truck. Trucks always move from left to right. The game ends immediately when the lead truck moves past the rightmost column of the tableau.
 
 When you move a truck, you will do one of the following:
-  - If the truck cards are in adjacent columns and the safety vehicle is centered on the launch zone (e.g. the starting position), or if there are no cards remaining in the balloon deck, then you should move the rightmost truck one column to the right.
+  - If the truck cards are in adjacent columns and the safety vehicle is centered on the launch zone (e.g. the starting position) then you should move the rightmost truck one column to the right.
 
   ![Moving a truck when the trucks are in a single group and the safety vehicle is centered on the launch zone.](wind_diagram_1.jpg)
 
@@ -73,11 +73,11 @@ When you move a truck, you will do one of the following:
 
   ![Moving a truck when the the trucks are in two groups.](wind_diagram_2.jpg)
 
-  - If all of the truck cards are in adjacent rows, but the safety vehicle is not centered on the launch zone (e.g. after each of the truck cards has been moved one time), then you should slide the safety vehicle one position to the right so that it is centered on the launch zone.
+  - If all of the truck cards are in adjacent rows, but the safety vehicle is not centered on the launch zone (e.g. after each of the truck cards in the launch zone has been moved one time), then you should slide the safety vehicle one position to the right so that it is centered on the launch zone.
 
   ![Moving a truck when the trucks are in a single group and the safety vehicle is not centered on the launch zone.](wind_diagram_3.jpg)
 
-__Note:__ Any balloon cards that are in the launch zone (i.e. balloons that are in the unpacked or inflated states) should accompany the truck card on which they have been placed if/when that truck card is moved. 
+__Note:__ Any balloon cards that are in the launch zone (i.e. balloons that are in the unpacked or inflated states) should accompany the truck card on which they have been placed when that truck card is moved. 
 
 ## Scoring
 After the game ends, you should compute your score.
@@ -90,7 +90,9 @@ In a competitive game, each balloon scores a number of points that is determined
 
 More precisely, each balloon scores a number of points equal to one plus the number of balloons flying at a lower altitude than itself plus the number of balloons flying at the same altitude as itself but behind it (to the left) in the formation. You should use the scoring tokens to indicate how many points each balloon scores.
 
-For example, the leftmost balloon in the bottom row of the formation always scores one point while the rightmost balloon in the top row of the formation scores one point for every balloon that is flying at the end of the game.  
+Use the scoring tokens to indicate the number of points scored by each balloon. Place the scoring token numbered "1" on the leftmost balloon in the bottom row of the formation. Scanning from left to right, place scoring tokens on the remaining balloons in the bottom row of the formation, always placing the token with lowest remaining number. Then proceed to the next highest row of the formation. Continue in this fashion, scanning from left to right and bottom to top, until each balloon that is flying has been assigned a scoring token.
+
+Notice that the leftmost balloon in the bottom row of the formation always scores one point while the rightmost balloon in the top row of the formation scores one point for every balloon that is flying at the end of the game. See the figure below for a more complete example.
 
 Your score is the sum of the scores for all of the balloons with which you are affiliated. You should reveal your colour card when you announce your score so that everyone can verify that the required computations have been performed correctly. The player with the highest score wins the game.
 
