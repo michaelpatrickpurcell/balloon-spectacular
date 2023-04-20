@@ -88,13 +88,11 @@ In a cooperative game, your score is the width of the formation (i.e. the number
 ### Competitive Game
 In a competitive game, each balloon scores a number of points that is determined by its position within the formation. In general, balloons that are flying at higher altitudes score more points than those that are flying at lower alititudes.  If balloons are flying at the same altitude, then the balloons that are closer to the front (right-hand side) of the formation score more points than the balloons that are closer to the back (left-hand side) of the formation. 
 
-More precisely, each balloon scores a number of points equal to one plus the number of balloons flying at a lower altitude than itself plus the number of balloons flying at the same altitude as itself but behind it (to the left) in the formation. You should use the scoring tokens to indicate how many points each balloon scores.
-
 Use the scoring tokens to indicate the number of points scored by each balloon. Place the scoring token numbered "1" on the leftmost balloon in the bottom row of the formation. Scanning from left to right, place scoring tokens on the remaining balloons in the bottom row of the formation, always placing the token with lowest remaining number. Then proceed to the next highest row of the formation. Continue in this fashion, scanning from left to right and bottom to top, until each balloon that is flying has been assigned a scoring token.
 
 Notice that the leftmost balloon in the bottom row of the formation always scores one point while the rightmost balloon in the top row of the formation scores one point for every balloon that is flying at the end of the game. See the figure below for a more complete example.
 
-Your score is the sum of the scores for all of the balloons with which you are affiliated. You should reveal your colour card when you announce your score so that everyone can verify that the required computations have been performed correctly. The player with the highest score wins the game.
+Your score is the sum of the scores for all of the balloons with which you are affiliated (i.e. that match your colour card). You should reveal your colour card when you announce your score so that everyone can verify that the required computations have been performed correctly. The player with the highest score wins the game.
 
 ![Scores for each balloon at the end of a hypothetical game](scoring_diagram.jpg)
 

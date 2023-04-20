@@ -93,7 +93,7 @@
 \definecolor{GrassGreen}{HTML}{75B556}
 \definecolor{TruckBlue}{HTML}{4169E1}
 
-\tikzset{pics/ballooncardfrontprintable/.style 2 args={
+\tikzset{pics/ballooncardfrontprintable/.style n args={4}{%
 	code={
 		\begin{scope}
 		\clip (-\smallcardwidth/2 - \smallbleed, 0in) --%
@@ -107,13 +107,16 @@
 %		\node () at (0,0) {\includegraphics[width=\smallcardwidth]{Images/background_clouds.png}};
 
 		\node () at (0,0) {\includegraphics[width=#2\smallcardwidth]{#1}};
+		\node at (-15mm,-25mm) {\Huge #3};
+		\node at (15mm,-25mm) {\Huge #4};
+				
 		\end{scope}
 		% Cutting guides for corners of the cards	
 		\pic () at (0,0) {smallcutguide={black}};
 
 }}}
 
-\tikzset{pics/ballooncardbackprintable/.style 2 args={
+\tikzset{pics/ballooncardbackprintable/.style n args={4}{%
 	code={
 		\begin{scope}
 		\clip (-\smallcardwidth/2 - \smallbleed, 0in) --%
@@ -127,6 +130,9 @@
 %		\node () at (0,0) {\includegraphics[width=\smallcardwidth]{Images/background_clouds.png}};
 
 		\node () at (0,0) {\includegraphics[width=#2\smallcardwidth]{#1}};
+		\node at (-15mm,-25mm) {\Huge #3};
+		\node at (15mm,-25mm) {\Huge #4};
+
 		% Cutting guides for corners of the cards	
 		\end{scope}
 		\pic () at (0,0) {smallcutguide={white}};
