@@ -132,7 +132,7 @@
 %		\node () at (0,0) {\includegraphics[width=\smallcardwidth]{Images/background_clouds.png}};
 
 		\node () at (0,0) {\includegraphics[width=#2\smallcardwidth]{#1}};
-		\node at (0mm,8mm) {{\setmainfont[Scale=1.75]{Playball} \Huge \contour{black}{\textcolor{white}{#3}}}};
+		\node at (0mm,8mm) {{\setmainfont[Scale=2.625]{Playball} \Huge \contour{black}{\textcolor{white}{#3}}}};
 
 %		\node at (-15mm,-25mm) {\Huge #3};
 %		\node at (15mm,-25mm) {\Huge #4};
@@ -193,7 +193,8 @@
 
 		\node[fill=white, inner sep=0pt, rounded corners=15mm]() at (0,0) {\includegraphics[width=0.8\smallcardheight]{#1}};
 
-		\node[xscale=-1, rotate=90] at (6mm,0mm) {{\setmainfont[Scale=2.125]{Playball} \Huge \contour{black}{\textcolor{white}{#3}}}};
+		\node[xscale=-1, rotate=90] at (6mm,0mm) {{\setmainfont[Scale=1.75]{Playball} \Huge \contour{black}{\textcolor{white}{#3}}}};
+%		\node[xscale=-1, rotate=90] at (6mm,0mm) {{\setmainfont[Scale=2.125]{Playball} \Huge \contour{black}{\textcolor{white}{#3}}}};
 
 %		\node[xscale=-1, rotate=90] at (-15mm,10mm) {\Huge #3};
 %		\node[xscale=-1, rotate=90] at (-15mm,-10mm) {\Huge #4};
@@ -236,3 +237,45 @@
 %		\pic[rotate=90] () at (0,0) {smallcutguide={white}};
 		\end{scope}
 	}}
+
+\tikzset{pics/othercardbackprintable2/.style n args={4}{
+	code={
+		\begin{scope}
+		\clip (-\smallcardheight/2 - \smallbleed, 0in) --%
+		      (-\smallcardheight/2 - \smallbleed, \smallcardwidth/2 + \smallbleed) --%
+		      (\smallcardheight/2 + \smallbleed, \smallcardwidth/2 + \smallbleed) --%
+		      (\smallcardheight/2 + \smallbleed, -\smallcardwidth/2 - \smallbleed) --%
+		      (-\smallcardheight/2 - \smallbleed, -\smallcardwidth/2 - \smallbleed) --%
+		      cycle;
+
+		% Pattern for card back
+		
+		\path[fill=#2] (-\smallcardheight/2 - \smallbleed, 0in) --%
+		      (-\smallcardheight/2 - \smallbleed, \smallcardwidth/2 + \smallbleed) --%
+		      (\smallcardheight/2 + \smallbleed, \smallcardwidth/2 + \smallbleed) --%
+		      (\smallcardheight/2 + \smallbleed, -\smallcardwidth/2 - \smallbleed) --%
+		      (-\smallcardheight/2 - \smallbleed, -\smallcardwidth/2 - \smallbleed) --%
+		      cycle;
+		
+		
+		\foreach \x in {-1.5in, -1.25in, -1.0in, -0.75in, -0.5in, -0.25in, 0in, 0.25in, 0.5in, 0.75in, 1.0in, 1.25in, 1.5in}
+		\foreach \y in {-1.0in, -0.75in,-0.5in, -0.25in, 0in, 0.25in, 0.5in, 0.75in, 1.0in}
+		    \draw[very thick] (\x,\y) circle (0.105in);
+		\foreach \x in {-1.375in, -1.125in, -0.875in, -0.625in, -0.375in, -0.125in,0.125in, 0.375in, 0.625in, 0.875in, 1.125in, 1.375in}
+		\foreach \y in {-0.875in, -0.625in,-0.375in, -0.125in, 0.125in, 0.375in, 0.625in, 0.875in}
+		    \draw[very thick] (\x,\y) circle (0.105in);
+
+		\node[fill=white, inner sep=0pt, rounded corners=15mm]() at (0,0) {\includegraphics[width=0.8\smallcardheight]{#1}};
+
+		\node[xscale=-1, rotate=90] at (6mm,0mm) {{\setmainfont[Scale=2.125]{Playball} \Huge \contour{black}{\textcolor{white}{#3}}}};
+
+%		\node[xscale=-1, rotate=90] at (-15mm,10mm) {\Huge #3};
+%		\node[xscale=-1, rotate=90] at (-15mm,-10mm) {\Huge #4};
+		
+		
+%		\node at (0,0) {{\setmainfont[Scale=1.25]{Oi}\Huge \textcolor{white}{Aloft}}};
+%		\node () at (0,0) {\includegraphics[width=\smallcardheight]{#1}};
+		% Cutting guides for corners of the cards	
+%		\pic[rotate=90] () at (0,0) {smallcutguide={black}};
+		\end{scope}
+	}}}
