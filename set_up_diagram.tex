@@ -33,14 +33,14 @@
 
 %\foreach \x in {-5, -5.25, ..., -6}
 %	\node[ballooncard, rotate=90] at (\x, -9.25) {\includegraphics[height=3.25in]{Images/grid_py.png}};
-\node[truckcard] at (-38, -9.25) {\includegraphics[width=3.25in]{Images/truck_b.png}};	
+\node[truckcard] at (-38, -9.25) {\includegraphics[width=3.25in]{Images/safety_truck.png}};	
 %	\node[inner sep=1.5in] at (-22, 21) {{\setmainfont[Scale=12.0]{Oi}\Huge Aloft}};
 
-\foreach \i/\j in {-44/diag_wy.png, -40/grid_rw.png, -36/horiz_pr.png, -32/vert_gy.png, -28/vert_pw.png, -24/diag_gp.png,            -20/vert_ry.png, -16/grid_py.png, -12/horiz_gw.png, -8/diag_gr.png, -4/lion.png, 0/wolf.png}
-\node[cardposition, rotate=90] at (\i, -14) {\includegraphics[height=3.25in]{Images/\j}};
+\foreach \i/\j in {-44/diag_wy_labels.png, -40/grid_rw_labels.png, -36/horiz_pr_labels.png, -32/vert_gy_labels.png, -28/vert_pw_labels.png, -24/diag_gp_labels.png, -20/vert_ry_labels.png, -16/grid_py_labels.png, -12/horiz_gw_labels.png, -8/diag_gr_labels.png, -4/lion_labels.png, 0/wolf_labels.png}
+\node[cardposition, rotate=90] at (\i, -15) {\includegraphics[height=3.25in]{Images/\j}};
 
 \foreach \i/\k in {-15.5/scoring_token_1.png, -14/scoring_token_2.png, -12.5/scoring_token_3.png,-11/scoring_token_4.png, -9.5/scoring_token_5.png, -8/scoring_token_6.png, -6.5/scoring_token_7.png,-5/scoring_token_8.png, -3.5/scoring_token_9.png, -2/scoring_token_10.png, -0.5/scoring_token_11.png,1/scoring_token_12.png}
-\node at (\i,-11.5) {\includegraphics[width=50mm]{Images/\k}};
+\node at (\i,-12) {\includegraphics[width=50mm]{Images/\k}};
 
 \end{tikzpicture}
 
