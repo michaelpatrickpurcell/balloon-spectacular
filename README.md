@@ -9,13 +9,13 @@ During the game, you will launch a flight of hot-air balloons. You can play eith
 ## Components
   - 13 balloon cards
      - 10 regular balloon cards
-     - 3 special shape cards
+     - 3 special shape balloon cards
   - 13 scoring tokens
-  - 6 truck cards
+  - 5 truck cards
   - 5 colour cards
   - 1 game board
 
-The number of special shape cards, truck cards, and scoring tokens that you will use in your game depends on how many people are playing. See the table below for details. Notice that you will always use all of the regular balloon cards and colour cards but, unless you are playing a five-player game, you will not use all of the special shape cards, truck cards, or scoring tokens. If you are playing with less than five players, you should use the scoring tokens numbered 1-12.
+<!-- The number of special shape cards, truck cards, and scoring tokens that you will use in your game depends on how many people are playing. See the table below for details. Notice that you will always use all of the regular balloon cards and colour cards but, unless you are playing a five-player game, you will not use all of the special shape cards, truck cards, or scoring tokens. If you are playing with less than five players, you should use the scoring tokens numbered 1-12.
 
 | Player Count | 1 - 4 | 5 |
 | ----------: | ---: | ---: |
@@ -23,18 +23,17 @@ The number of special shape cards, truck cards, and scoring tokens that you will
 | Special Shape Cards | 2 | 3 |
 | Truck Cards | 5 | 6 |
 | Colour Cards | 5 | 5 |
-| Scoring Tokens | 12 | 13 | 
+| Scoring Tokens | 12 | 13 |  -->
 
 
 ## Set Up
-  1. If you are playing a competitive game, deal one colour card at random to each player. Your colour card will determine the colour of balloons with which you are _affiliated_. Do not reveal this card to the other players until the end of the game. If you are playing a cooperative game, then you should skip this step.
+  1. Deal one colour card at random to each player. Your colour card will determine the colour of balloons with which you are _affiliated_. Do not reveal this card to the other players until the end of the game.
      - Each regular balloon card is affiliated with two of the five possible colours.  The colours that a balloon card is affiliated with are the colours of the envelope of the balloon depicted on that card. Special shape cards are not affiliated with any colour. 
-  2.  Collect the truck cards that you will use during your game. Set one truck card aside. Place the remaining truck cards in a single row below the left-hand side of the game board. These truck cards comprise the _launch zone_. The rightmost truck card in the launch zone is called the _lead truck_.
-  3. Collect the truck card that you set aside in the previous step. Place it below the middle of the launch zone. This truck card is the _safety vehicle_.
+  2.  Collect the truck cards that you will use during your game. Set one truck card aside. Place the remaining truck cards in a single row below the left-hand side of the game board. These truck cards comprise the _launch zone_. The leftmost truck card is called the _last truck_. The rightmost truck card in the launch zone is called the _lead truck_.
+  3. Collect the truck card that you set aside in the previous step. Place it below the last truck. This truck card is the _safety truck_.
   4.  Collect the regular balloon cards and special shape cards that you will use during your game. These cards will comprise the _balloon deck_.
-  5.  If you are playing a cooperative game, shuffle the balloon deck. If you are playing a competitive game, then you should skip this step. 
-  6.  Place the balloon deck below the launch zone. In a competitive game, you should spread the balloon cards on the table so that they are all visible.
-  7. Place the scoring tokens below the play area.
+  5. Deal the cards in the balloon deck in a single row below the launch zone. 
+  6. Place the scoring tokens below the play area.
 ![Set up for a four-player game.](set_up_diagram.jpg)
 
 ## Gameplay
@@ -50,12 +49,9 @@ Throughout the game, each balloon will progress through a series of states: pack
 To advance a balloon, you move a balloon from its current state to the next. 
   - All balloons begin in the packed state. All balloons in the packed state should be in the balloon deck.
   - To advance a balloon from the packed state to the unpacked state, you should remove it from the balloon deck and place it horizontally on one of the truck cards in the launch zone. You may not place a balloon on the safety vehicle.
-     - In a cooperative game, you may only unpack the first balloon (top card of the balloon deck) which is in the packed state.
-     - In a competitive game, you may unpack any balloon which is in the packed state.
 - To advance a balloon from the unpacked state to the inflated state, you should turn it so that it is placed vertically on its truck card.
 - To advance a balloon from the inflated state to the flying state, you should slide it into the bottom row of the play area directly above its truck card. It will then be flying at an altitude of one.
    - Balloons that are flying (at any altitude) may never be orthogonally adjacent to another balloon which is flying.
-   - In a cooperative game, balloons that are flying may never be diagonally adjacent to another balloon which is flying and with which it shares a colour. 
 - To advance a ballon that is flying, you should slide it up one row so that its altitude increases by one.
    - The maximum altitude at which balloons can fly is four.
    - Balloons never descend (decrease their altitude) or move horizontally. 
@@ -65,7 +61,7 @@ To advance a balloon, you move a balloon from its current state to the next.
 If any balloons are flying, then before you advance a balloon you will move a truck. Trucks always move from left to right. The game ends immediately when the lead truck moves past the rightmost column of the tableau.
 
 When you move a truck, you will do one of the following:
-  - If the truck cards are in adjacent columns and the safety vehicle is centered on the launch zone (e.g. the starting position) then you should move the rightmost truck one column to the right.
+  - If the truck cards are in adjacent columns and the safety vehicle is below the last truck (e.g. the starting position) then you should move the rightmost truck one column to the right.
 
   ![Moving a truck when the trucks are in a single group and the safety vehicle is centered on the launch zone.](wind_diagram_1.jpg)
 
@@ -73,20 +69,14 @@ When you move a truck, you will do one of the following:
 
   ![Moving a truck when the the trucks are in two groups.](wind_diagram_2.jpg)
 
-  - If all of the truck cards are in adjacent rows, but the safety vehicle is not centered on the launch zone (e.g. after each of the truck cards in the launch zone has been moved one time), then you should slide the safety vehicle one position to the right so that it is centered on the launch zone.
+  - If all of the truck cards are in adjacent rows, but the safety vehicle is not below the last truck (e.g. after each of the truck cards in the launch zone has been moved one time), then you should slide the safety vehicle one position to the right so that it is below the last truck.
 
   ![Moving a truck when the trucks are in a single group and the safety vehicle is not centered on the launch zone.](wind_diagram_3.jpg)
 
 __Note:__ Any balloon cards that are in the launch zone (i.e. balloons that are in the unpacked or inflated states) should accompany the truck card on which they have been placed when that truck card is moved. 
 
 ## Scoring
-After the game ends, you should compute your score.
-
-### Cooperative Game
-In a cooperative game, your score is the width of the formation (i.e. the number of adjacent columns required to contain all of the balloons that are flying), plus a three-point penalty for each balloon that you failed to launch during the game. Your objective is to minimize your score.
-
-### Competitive Game
-In a competitive game, each balloon scores a number of points that is determined by its position within the formation. In general, balloons that are flying at higher altitudes score more points than those that are flying at lower alititudes.  If balloons are flying at the same altitude, then the balloons that are closer to the front (right-hand side) of the formation score more points than the balloons that are closer to the back (left-hand side) of the formation. 
+Each balloon scores a number of points that is determined by its position within the formation. In general, balloons that are flying at higher altitudes score more points than those that are flying at lower alititudes.  If balloons are flying at the same altitude, then the balloons that are closer to the front (right-hand side) of the formation score more points than the balloons that are closer to the back (left-hand side) of the formation. 
 
 Use the scoring tokens to indicate the number of points scored by each balloon. Place the scoring token numbered "1" on the leftmost balloon in the bottom row of the formation. Scanning from left to right, place scoring tokens on the remaining balloons in the bottom row of the formation, always placing the token with lowest remaining number. Then proceed to the next highest row of the formation. Continue in this fashion, scanning from left to right and bottom to top, until each balloon that is flying has been assigned a scoring token.
 
@@ -96,3 +86,10 @@ Your score is the sum of the scores for all of the balloons with which you are a
 
 ![Scores for each balloon at the end of a hypothetical game](scoring_diagram.jpg)
 
+## Solo Mode
+Aloft can also be enjoyed as a solo experience. This version of the game is similar to the multi-player version described above, differing in the following ways:
+  - You will not use the colour cards or the scoring tokens.
+  - You will only use two of the special shape balloon cards.
+  - You should shuffle the balloon deck before dealing out the balloon cards in a single row below the tableau. The order in which these cards are arranged is significant. If you choose to unpack a balloon on a given turn, you must unpack the first (leftmost) balloon of the balloon deck.
+  - You must adhere to one additional rule that governs the arrangement of balloons in the tableau. At no point can two balloons which share a colour be diagonally adjacent to one another.
+  - You will use a different function to compute your score. Your score is equal to the number of adjacent columns required to contain the formation of all balloons which are flying at the end of the game plus a three point penalty for every balloon which you were unable to launch.

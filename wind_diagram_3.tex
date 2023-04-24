@@ -6,13 +6,13 @@
 \begin{tikzpicture}[x=1in, y=1in]
 \foreach \x in {-4, 0, 4, 8}
 \node[truckcard] at (\x,0) {\includegraphics[width=3.25in]{Images/truck_b.png}};
-\node[cardposition, rotate=90] at (2, -3.5) {};
+\node[cardposition, rotate=90] at (-4, -3.5) {};
 %\foreach \x in {7, 6.75, ..., 6}
 %	\node[ballooncard, rotate=90] at (\x, -3.5) {\includegraphics[height=3.25in]{Images/grid_py.png}};
-\node[truckcard] at (-2,-3.5) {\includegraphics[width=3.25in]{Images/safety_truck.png}};
+\node[truckcard] at (-8,-3.5) {\includegraphics[width=3.25in]{Images/safety_truck.png}};
 
 
-\pic[transform shape, anchor=east] at (0.875, -3.5) {nextarrow};
+\pic[transform shape, anchor=east] at (-5.125, -3.5) {nextarrow};
 
 \end{tikzpicture}
 \end{document}
