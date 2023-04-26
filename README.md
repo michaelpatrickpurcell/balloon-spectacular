@@ -90,6 +90,6 @@ Your score is the sum of the scores for all of the balloons with which you are a
 Aloft can also be enjoyed as a solo experience. This version of the game is similar to the multi-player version described above, differing in the following ways:
   - You will not use the colour cards or the scoring tokens.
   - You will only use two of the special shape balloon cards.
-  - You should shuffle the balloon deck before dealing out the balloon cards in a single row below the tableau. The order in which these cards are arranged is significant. If you choose to unpack a balloon on a given turn, you must unpack the first (leftmost) balloon of the balloon deck.
-  - You must adhere to one additional rule that governs the arrangement of balloons in the tableau. At no point can two balloons which share a colour be diagonally adjacent to one another.
+  - You will shuffle the balloon deck before dealing out the balloon cards in a single row below the tableau. The order in which these cards are arranged is significant. If you choose to unpack a balloon on a given turn, you must unpack the first (leftmost) balloon of the balloon deck.
+  - You will adhere to one additional rule that governs the arrangement of balloons in the tableau. At no point can two balloons which share a colour be diagonally adjacent to one another.
   - You will use a different function to compute your score. Your score is equal to the number of adjacent columns required to contain the formation of all balloons which are flying at the end of the game plus a three point penalty for every balloon which you were unable to launch.
