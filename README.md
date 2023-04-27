@@ -61,17 +61,24 @@ To advance a balloon, you move a balloon from its current state to the next.
 If any balloons are flying, then before you advance a balloon you will move a truck. Trucks always move from left to right. The game ends immediately when the lead truck moves past the rightmost column of the tableau.
 
 When you move a truck, you will do one of the following:
-  - If the truck cards are in adjacent columns and the safety vehicle is below the last truck (e.g. the starting position) then you should move the rightmost truck one column to the right.
+  - Move a launch-zone (blue) truck.
+  - Move the safety (orange) truck.
 
-  ![Moving a truck when the trucks are in a single group and the safety vehicle is centered on the launch zone.](wind_diagram_1.jpg)
+The safety truck must always be between (or even with) the lead truck and the last truck. If moving the safety truck would cause it to move in front of the lead truck, then you must move a launch-zone truck. Similarly, if moving a launch-zone truck would cause the safety truck to fall behind the last truck, then you must move the safety truck.
 
-  - If the truck cards are not in adjacent columns, then the truck cards will be in two groups which are separated by one empty column. You should slide the rightmost truck from the first group one column to the right. It should then be the leftmost truck in the second group.
+#### Moving a Launch-Zone Truck
+If the truck cards are in adjacent columns, then you should move the rightmost truck one column to the right.
 
-  ![Moving a truck when the the trucks are in two groups.](wind_diagram_2.jpg)
+![Moving a truck when the trucks are in a single group and the safety vehicle is centered on the launch zone.](wind_diagram_1.jpg)
 
-  - If all of the truck cards are in adjacent rows, but the safety vehicle is not below the last truck (e.g. after each of the truck cards in the launch zone has been moved one time), then you should slide the safety vehicle one position to the right so that it is below the last truck.
+If the launch-zone trucks are not in adjacent columns, then they will be in two groups which are separated by one empty column. You should slide the rightmost truck from the first group one column to the right. It should then be the leftmost truck in the second group.
 
-  ![Moving a truck when the trucks are in a single group and the safety vehicle is not centered on the launch zone.](wind_diagram_3.jpg)
+![Moving a truck when the the trucks are in two groups.](wind_diagram_2.jpg)
+
+### Moving the Safety Truck
+To move the safety truck, you should slide it one column to the right. Remember that the safety truck must always be between (or even with) the lead truck and the last truck.
+
+![Moving a truck when the trucks are in a single group and the safety vehicle is not centered on the launch zone.](wind_diagram_3.jpg)
 
 __Note:__ Any balloon cards that are in the launch zone (i.e. balloons that are in the unpacked or inflated states) should accompany the truck card on which they have been placed when that truck card is moved. 
 
