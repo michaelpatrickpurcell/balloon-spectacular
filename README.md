@@ -2,7 +2,7 @@
 A lightweight strategy game about hot-air ballooning. During the game you will oversee a mass ascension at a balloon festival and try to ensure that your balloons end up in the best positions in the resulting formation.
 
 ## Overview
-Aloft is a game for one to five players. It can be played in approximately thirty minutes and is intended for players who are at least eight years old.
+Aloft is a game for one to five players. It can be played in approximately fifteen minutes and is intended for players who are at least eight years old.
 
 During the game, you will launch a flight of hot-air balloons. You can play either cooperatively or competitively. In a cooperative game, you will work together to launch all of the balloons in as tight a formation as possible. In a competitive game, each player will be affiliated with a different colour and you will try to ensure that the balloons of your colour are both higher and closer to the front of the formation than the balloons of your opponents' colours.
 
