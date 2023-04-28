@@ -46,7 +46,7 @@
 
 
 \usepackage{enumitem}
-\setlist[description]{labelindent=0pt, labelsep=\widthof{ }, leftmargin=\widthof{\textbf{License: }}, font=\setmainfont{URWClassico}\bfseries}
+\setlist[description]{labelindent=0pt, labelsep=\widthof{ }, leftmargin=\widthof{\textbf{License: }}, font=\setmainfont{Tex Gyre Schola}\bfseries}
 
 \usepackage[hang,flushmargin]{footmisc}
 \newcommand\blfootnote[1]{%
@@ -213,19 +213,19 @@ On your turn, you should advance one balloon of your choice. If you cannot advan
 
 \newpage
 To advance a balloon, you move a balloon from its current state to the next.
-\begin{itemize}
-  \item To advance a balloon from the packed state to the unpacked state, place it horizontally on a launch-zone truck.
-  \begin{itemize}[nosep]
+\begin{description}[leftmargin=0pt]
+  \item[Unpack:] To advance a balloon from the packed state to the unpacked state, place it horizontally on a launch-zone truck.
+  \begin{itemize}
     \item You may not place a balloon on a truck that has a balloon on it.
   \end{itemize}
-  \item To advance a balloon from the unpacked state to the inflated state, turn it so that it is placed vertically on its truck.
-  \item To advance a balloon from the inflated state to the flying state, move it to the bottom row of the game board directly above its truck. It will then be flying at an altitude of one.
-  \item To advance a balloon that is flying, move it up one row. It will then be flying at an altitude one more than before.
-  \begin{itemize}[nosep]
+  \item[Inflate:] To advance a balloon from the unpacked state to the inflated state, turn it so that it is placed vertically on its truck.
+  \item[Launch:] To advance a balloon from the inflated state to the flying state, move it to the bottom row of the game board above its truck. It will then be flying at an altitude of one.
+  \item[Ascend:] To advance a balloon that is flying, move it up one row. It will then be flying at an altitude one more than before.
+  \begin{itemize}
     \item Balloons that are flying may never be orthogonally adjacent to one another.% balloon which is flying.
     \item The maximum altitude at which balloons can fly is four.
   \end{itemize}
-\end{itemize}
+\end{description}
 
 \newpage
 \enlargethispage{1.75\baselineskip}
