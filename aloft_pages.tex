@@ -235,13 +235,17 @@ To advance a balloon, you move a balloon from its current state to the next.
 Use the scoring tokens to indicate the number of points scored by each balloon.
 \begin{enumerate}
   \item Place the scoring token numbered ``1'' on the leftmost balloon in the bottom row of the formation.
-  \item Scanning from left to right, place scoring tokens on the remaining balloons in the bottom row of the formation, placing the token with lowest remaining number on each balloon as you encounter it.
-  \item Proceed to the next highest row of the formation. Continue in this fashion, scanning from left to right and bottom to top, until each balloon that is flying has been assigned a scoring token.
+  \item Scanning from left to right and bottom to top, place scoring tokens on the other balloons in the formation, placing the token with lowest remaining number on each balloon as you encounter it.
+%  \item Proceed to the next highest row of the formation. Continue in this fashion, scanning from left to right and bottom to top, until each balloon that is flying has been assigned a scoring token.
 \end{enumerate}
 
 %Notice that the leftmost balloon in the bottom row of the formation always scores one point while the rightmost balloon in the top row of the formation scores one point for every balloon that is flying at the end of the game. See the figure below for a more complete example.
 
 Your score is the sum of the scores for all of the balloons with which you are affiliated (i.e. that match your color card). The player with the highest score wins the game.
+
+\begin{center}
+\includegraphics[scale=0.115]{scoring_diagram.jpg}
+\end{center}
 
 \newpage
 \enlargethispage{1.75\baselineskip}
