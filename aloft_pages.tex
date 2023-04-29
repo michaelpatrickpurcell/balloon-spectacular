@@ -76,7 +76,7 @@
 \AddToShipoutPictureBG{
 \begin{tikzpicture}[remember picture, overlay]
 %	\node () at (current page.center) {\includegraphics[width=\pagewidth, height=\pageheight]{Images/aloft_cover_background.png}};
-	\node () at (current page.center) {\includegraphics[width=\pagewidth, height=\pageheight]{Images/aloft_cover_background.png}};
+	\node () at (current page.center) {\includegraphics[width=\pagewidth, height=\pageheight]{Images/aloft_front_cover_background.png}};
 \end{tikzpicture}
 }
 
@@ -216,7 +216,7 @@ To advance a balloon, you move a balloon from its current state to the next.
 \begin{description}[leftmargin=0pt]
   \item[Unpack:] To advance a balloon from the packed state to the unpacked state, place it horizontally on a launch-zone truck.
   \begin{itemize}
-    \item You may not place a balloon on a truck that has a balloon on it.
+    \item You may not place a balloon on a truck that already has a balloon on it.
   \end{itemize}
   \item[Inflate:] To advance a balloon from the unpacked state to the inflated state, turn it so that it is placed vertically on its truck.
   \item[Launch:] To advance a balloon from the inflated state to the flying state, move it to the bottom row of the game board above its truck. It will then be flying at an altitude of one.
@@ -260,5 +260,13 @@ This is similar to the multi-player version, differing in the following ways:
   \item Balloons that are flying and that share a color may never be diagonally adjacent to one another.
   \item Your score is equal to the number of adjacent columns required to contain the formation plus a three point penalty for every balloon which you failed to launch.
 \end{itemize}
+ \newpage
+ \AddToShipoutPictureBG{
+\begin{tikzpicture}[remember picture, overlay]
+%	\node () at (current page.center) {\includegraphics[width=\pagewidth, height=\pageheight]{Images/aloft_cover_background.png}};
+	\node () at (current page.center) {\includegraphics[width=\pagewidth, height=\pageheight]{Images/aloft_back_cover_background.png}};
+\end{tikzpicture}
+}
+\phantom{Aloft}
 
 \end{document}
