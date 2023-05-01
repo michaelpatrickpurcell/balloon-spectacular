@@ -31,9 +31,8 @@ During the game, you will launch a flight of hot-air balloons. You will try to e
      <!-- - Each regular balloon card is affiliated with two of the five possible colours.  The colours that a balloon card is affiliated with are the colours of the envelope of the balloon depicted on that card. Special shape cards are not affiliated with any colour.  -->
   2. Place the launch-zone truck cards in a single row below the four leftmost columns of the game board. 
   3. Place the safety truck card below the leftmost launch-zone truck card.
-  4. Collect the regular balloon cards and special shape cards that you will use during your game. These cards will comprise the _balloon deck_.
-  5. Display the balloon cards in a single row below the launch zone. 
-  6. Place the scoring tokens nearby for use when scoring at the end of the game.
+  4. Display the balloon cards in a single row below the launch zone. 
+  5. Place the scoring tokens nearby for use when scoring at the end of the game.
 ![Set up for a four-player game.](set_up_diagram.jpg)
 
 ## Gameplay
