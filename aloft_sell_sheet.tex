@@ -1,0 +1,91 @@
+\documentclass[a5paper, DIV=18, 12pt]{scrartcl}
+\usepackage{balloonspectacular}
+\usepackage{multicol}
+\setlength\columnsep{0.0cm}
+\usepackage{enumitem}
+\usepackage[margin=0.925cm]{geometry}
+
+\setmainfont[Scale=1.0]{Tex Gyre Schola}
+
+\setkomafont{section}{\setmainfont[Scale=1.125]{Fredoka-Bold}\LARGE}
+\setkomafont{subsection}{\setmainfont{Fredoka-Bold}\Large}
+\setkomafont{subsubsection}{\setmainfont{Fredoka-Bold}\large}
+
+% Adjust spacing before and after section headings
+\RedeclareSectionCommand[
+  runin=false,
+  beforeskip=1.0\baselineskip,
+  afterskip=0.5\baselineskip
+]{section}
+
+% Adjust spacing before and after subsection headings
+\RedeclareSectionCommand[
+  runin=false,
+  beforeskip=1.0\baselineskip,
+  afterskip=0.25\baselineskip
+]{subsection}
+
+% Adjust spacing before and after subsubsection headings
+\RedeclareSectionCommand[
+  runin=false,
+  beforeskip=1.0\baselineskip,
+  afterskip=0.25\baselineskip
+]{subsubsection}
+
+\pagestyle{empty}
+\begin{document}
+%\begin{tikzpicture}
+%%\path[draw, red] (-74.25mm, -105mm) -- (74.25mm,105mm);
+%\node[inner sep=0mm] at (0,80mm) {{\setmainfont[Scale=3.0]{Oi}\Huge Aloft}};
+%\node[inner sep=0mm] at (0,60mm) {{\setmainfont[Scale=1.25]{Playball}\Huge Designed by Michael Purcell}};
+%\node[inner sep=0mm] at (0, 40mm) {This is a test};
+%\end{tikzpicture}
+\vspace{-1ex}
+\begin{center}
+%{\setmainfont[Scale=3.25]{Oi}\huge \textcolor{SkyBlue}{Aloft}}\\[1ex]
+\includegraphics[width=\textwidth]{Images/aloft_banner.png}
+\end{center}
+\vspace{-0.5ex}
+A lightweight strategy game about hot-air ballooning. During the game, you will oversee a mass ascension and try to ensure that your balloons end up in the best positions in the resulting formation.
+\flushleft
+\vspace{-0ex}
+\begin{multicols}{2}
+\section*{Overview}
+This is a competitive game\\for one to five players. It can\\be played in about thirty\\minutes and is intended for\\people aged eight and older.
+
+\vspace{1.5ex}
+
+Aloft features innovative\\mechanics that are tightly\\coupled to its distinctive\\theme. As you play, you will\\create a beautiful picture\\
+reminiscent of what you \\ might see at a real-world\\balloon festival. \vfill\null\columnbreak
+\section*{Components}
+\begin{itemize}[nosep, leftmargin=*]
+	\item 13 balloon cards
+	\begin{itemize}[nosep, leftmargin=*]
+	  \item 10 regular balloon cards
+	  \item 3 special shape balloon cards
+	\end{itemize}
+	\vspace{1ex}
+	\item 5 truck cards
+	\begin{itemize}[nosep, leftmargin=*]
+	  \item 4 launch zone truck cards
+	  \item 1 safety truck card
+	\end{itemize}
+	\vspace{1ex}
+	\item 5 color cards
+	\vspace{1ex}
+	\item 13 scoring tokens
+	\vspace{1ex}
+	\item 1 panoramic game board
+\end{itemize}
+\vspace{4.3ex}
+{\setmainfont[Scale=1.125]{Fredoka-Bold}\LARGE \hfill Up, Up, and Away!}
+\end{multicols}
+\begin{center}
+\vspace{-1.5ex}
+\includegraphics[width=\textwidth]{Images/sell_sheet_diagram.png}
+\end{center}
+%\vspace{-2ex}
+%\hrule
+%\vspace{2ex}
+\textbf{Design:} Michael Purcell \hfill \textbf{Contact:} aloft.board.game@gmail.com
+\end{document}
