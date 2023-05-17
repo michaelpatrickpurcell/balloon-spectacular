@@ -19,9 +19,10 @@
 \contourlength{0.25mm}
 \contournumber{1024}
 
-\setkomafont{section}{\setmainfont{Fredoka-Bold}\LARGE}
-\setkomafont{subsection}{\setmainfont{Fredoka-Bold}\Large}
-\setkomafont{subsubsection}{\setmainfont{Fredoka-Bold}\large}
+\definecolor{SunriseBlue}{HTML}{A1A6CF}
+\setkomafont{section}{\setmainfont{Fredoka-Bold}\LARGE\color{SunriseBlue}}
+\setkomafont{subsection}{\setmainfont{Fredoka-Bold}\Large\color{SunriseBlue}}
+\setkomafont{subsubsection}{\setmainfont{Fredoka-Bold}\large\color{SunriseBlue}}
 
 % Adjust spacing before and after section headings
 \RedeclareSectionCommand[
@@ -115,11 +116,11 @@ During the game, you will launch a flight of hot-air balloons. You will try to e
   \item 13 scoring tokens
   \item 5 truck cards
     \begin{itemize}[nosep]
-      \item 4 launch-zone truck cards
+      \item 4 launch zone truck cards
       \item 1 safety truck card
     \end{itemize}
   \item 5 color cards
-  \item 1 game board
+  \item 1 panoramic game board
 \end{itemize}
 
 
@@ -134,9 +135,9 @@ During the game, you will launch a flight of hot-air balloons. You will try to e
 
 %Each regular balloon card is \emph{affiliated} with two of the five possible colors.  The colors that a balloon card is affiliated with are the colors of the envelope of the balloon depicted on that card. Special shape cards are not affiliated with any color.
  
-  \item Place the launch-zone truck cards in a single row below the four leftmost columns of the the game board.% These truck cards comprise the \emph{launch zone}. The leftmost truck card is called the \emph{last truck}. The rightmost truck card in the launch zone is called the \emph{lead truck}.
+  \item Place the launch zone truck cards in a single row below the four leftmost columns of the the game board.% These truck cards comprise the \emph{launch zone}. The leftmost truck card is called the \emph{last truck}. The rightmost truck card in the launch zone is called the \emph{lead truck}.
 
-  \item Place the safety truck card below leftmost launch-zone truck card.
+  \item Place the safety truck card below leftmost launch zone truck card.
 
 %  \item Collect the regular balloon cards and special shape cards that you will use during your game. These cards will comprise the \emph{balloon deck}.
 
@@ -158,25 +159,25 @@ On your turn, you will perform either one or two actions:
   \item Advance a balloon.
 \end{enumerate}
 
-The game ends when the lead truck moves past the rightmost column of the game board. If this happens on your turn, you should advance a balloon as usual and then proceed to {\setmainfont{Fredoka-Bold} Scoring}.
+The game ends when the lead truck moves past the rightmost column of the game board. If this happens on your turn, you should advance a balloon as usual and then proceed to {\setmainfont{Fredoka-Bold} \textcolor{SunriseBlue}{Scoring}}.
 
 \subsection*{Move a Truck}
 If any balloons are flying, then before you advance a balloon you will move a truck. Trucks always move from left to right.
 
 When you move a truck, you will either
 \begin{itemize}[nosep]
-  \item Move a launch-zone truck.
+  \item Move a launch zone truck.
   \item Move the safety truck.
 \end{itemize}
 
 The safety truck must always be between (or even with) the lead truck and the last truck.
 %\begin{itemize}
-%  \item If moving the safety truck would cause it to pass the lead truck, you must move a launch-zone truck.
-%  \item If moving a launch-zone truck would cause the last truck to pass the safety truck, you must move the safety~truck.
+%  \item If moving the safety truck would cause it to pass the lead truck, you must move a launch zone truck.
+%  \item If moving a launch zone truck would cause the last truck to pass the safety truck, you must move the safety~truck.
 %\end{itemize}
 
-\subsubsection*{Moving a Launch-Zone Truck}
-If the launch-zone trucks are in adjacent columns, then you should move the rightmost truck one column to the right.
+\subsubsection*{Moving a Launch Zone Truck}
+If the launch zone trucks are in adjacent columns, then you should move the rightmost truck one column to the right.
 
 \begin{center}
 \includegraphics[scale=0.1]{wind_diagram_1.jpg}
@@ -184,23 +185,23 @@ If the launch-zone trucks are in adjacent columns, then you should move the righ
 
 %![Moving a truck when the trucks are in a single group and the safety vehicle is centered on the launch zone.](wind_diagram_1.jpg)
 
-Otherwise, the launch-zone trucks will be in two groups which are separated by one empty column. You should move the rightmost truck from the first group one column to the right.
+Otherwise, the launch zone trucks will be in two groups which are separated by one empty column. You should move the rightmost truck from the first group one column to the right.
 %It should then be the leftmost truck in the second group.
 
 \begin{center}
 \includegraphics[scale=0.1]{wind_diagram_2.jpg}
 \end{center}
 
-If moving a launch-zone truck would cause the last truck to pass the safety truck, then you must move the safety truck.
+If moving a launch zone truck would cause the last truck to pass the safety truck, then you must move the safety truck.
 
-Any balloon on a launch-zone truck should accompany that truck when it is moved.
+Any balloon on a launch zone truck should accompany that truck when it is moved.
 
 \newpage
 \enlargethispage{1.75\baselineskip}
 \subsubsection*{Moving the Safety Truck}
 To move the safety truck, you should move it one column to the right.
 
-If moving the safety truck would cause it to pass the lead truck, then you must move a launch-zone truck.
+If moving the safety truck would cause it to pass the lead truck, then you must move a launch zone truck.
 
 \begin{center}
 \includegraphics[scale=0.1]{wind_diagram_3.jpg}
@@ -214,7 +215,7 @@ On your turn, you should advance one balloon of your choice. If you cannot advan
 \newpage
 To advance a balloon, you should move it from its current state to the next.
 \begin{description}[leftmargin=0pt]
-  \item[Unpack:] To advance a balloon from the packed state to the unpacked state, place it horizontally on a launch-zone truck.
+  \item[Unpack:] To advance a balloon from the packed state to the unpacked state, place it horizontally on a launch zone truck.
   \begin{itemize}
     \item You may not place a balloon on a truck that already has a balloon on it.
   \end{itemize}
@@ -268,5 +269,17 @@ This is similar to the multi-player version, differing in the following ways:
 \end{tikzpicture}
 }
 \phantom{Aloft}
-
+%\vfill
+%\begin{center}
+%{\setmainfont{Fredoka-Bold}\huge\textcolor{white}{The Balloonist's Prayer}\\[2ex]}
+%\textcolor{white}{May the winds welcome you with softness.\\[2ex]
+%May the sun bless you with its warm hands.\\[2ex]
+%May you fly so high and so well that God\\[2ex]
+%joins you in laughter and sets you gently\\[2ex]
+%back into the loving arms of Mother Earth.}
+%\end{center}
+%%\vfill
+%\phantom{Aloft}
+%
+%\phantom{Aloft}
 \end{document}
