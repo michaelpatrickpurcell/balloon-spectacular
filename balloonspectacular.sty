@@ -88,11 +88,13 @@
 
 \definecolor{PinkSky}{HTML}{FFE0B6}
 \definecolor{BlueSky}{HTML}{ACC2E5}
+\definecolor{BlueSky2}{HTML}{95B9E0}
 \definecolor{RoadBrown}{HTML}{CDB481}
 \definecolor{BasketBrown}{HTML}{964B00}
 \definecolor{GrassGreen}{HTML}{75B556}
 \definecolor{TruckBlue}{HTML}{4169E1}
 \definecolor{TruckOrange}{HTML}{FF7A2D}
+\definecolor{PinkSky}{HTML}{FCD0B9}
 
 
 \tikzset{pics/ballooncardfrontprintable/.style n args={4}{%
@@ -139,7 +141,7 @@
 %
 		% Cutting guides for corners of the cards	
 		\end{scope}
-		\pic () at (0,0) {smallcutguide={white}};
+		\pic () at (0,0) {smallcutguide={black}};
 
 	}}}
 
@@ -279,3 +281,53 @@
 %		\pic[rotate=90] () at (0,0) {smallcutguide={black}};
 		\end{scope}
 	}}}
+
+\tikzset{patterncardfrontprintable/.pic={%
+		\begin{scope}
+		\clip (-\smallcardwidth/2 - \smallbleed, 0in) --%
+		      (-\smallcardwidth/2 - \smallbleed, \smallcardheight/2 + \smallbleed) --%
+		      (\smallcardwidth/2 + \smallbleed, \smallcardheight/2 + \smallbleed) --%
+		      (\smallcardwidth/2 + \smallbleed, -\smallcardheight/2 - \smallbleed) --%
+		      (-\smallcardwidth/2 - \smallbleed, -\smallcardheight/2 - \smallbleed) --%
+		      cycle;
+
+%		\path[fill=BlueSky] (-\smallcardwidth/2 - \smallbleed, 0in) --%
+%		      (-\smallcardwidth/2 - \smallbleed, \smallcardheight/2 + \smallbleed) --%
+%		      (\smallcardwidth/2 + \smallbleed, \smallcardheight/2 + \smallbleed) --%
+%		      (\smallcardwidth/2 + \smallbleed, -\smallcardheight/2 - \smallbleed) --%
+%		      (-\smallcardwidth/2 - \smallbleed, -\smallcardheight/2 - \smallbleed) --%
+%		      cycle;
+
+		% Pattern for card front
+		\node[rotate=-90] () at (0,0) {\includegraphics[width=\smallcardheight+2\smallbleed]{Images/pattern_card_background3.png}};
+
+		\node[rotate=-90] () at (0,0) {\includegraphics[width=\smallcardheight]{#1}};				
+		\end{scope}
+		% Cutting guides for corners of the cards	
+		\pic () at (0,0) {smallcutguide={black}};
+}}
+
+\tikzset{colorcardfrontprintable/.pic={%
+		\begin{scope}
+		\clip (-\smallcardwidth/2 - \smallbleed, 0in) --%
+		      (-\smallcardwidth/2 - \smallbleed, \smallcardheight/2 + \smallbleed) --%
+		      (\smallcardwidth/2 + \smallbleed, \smallcardheight/2 + \smallbleed) --%
+		      (\smallcardwidth/2 + \smallbleed, -\smallcardheight/2 - \smallbleed) --%
+		      (-\smallcardwidth/2 - \smallbleed, -\smallcardheight/2 - \smallbleed) --%
+		      cycle;
+
+%		\path[fill=BlueSky] (-\smallcardwidth/2 - \smallbleed, 0in) --%
+%		      (-\smallcardwidth/2 - \smallbleed, \smallcardheight/2 + \smallbleed) --%
+%		      (\smallcardwidth/2 + \smallbleed, \smallcardheight/2 + \smallbleed) --%
+%		      (\smallcardwidth/2 + \smallbleed, -\smallcardheight/2 - \smallbleed) --%
+%		      (-\smallcardwidth/2 - \smallbleed, -\smallcardheight/2 - \smallbleed) --%
+%		      cycle;
+
+		% Pattern for card front
+		\node () at (0,0) {\includegraphics[height=\smallcardheight+2\smallbleed]{Images/background_clouds.png}};
+
+		\node[rotate=90] () at (0,0) {\includegraphics[width=\smallcardheight]{Images/solid_#1_rotated.png}};				
+		\end{scope}
+		% Cutting guides for corners of the cards	
+		\pic () at (0,0) {smallcutguide={black}};
+}}

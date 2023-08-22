@@ -5,11 +5,16 @@
 \begin{document}
 \begin{tikzpicture}[x=1mm, y=1mm]
 \path (0,0) rectangle (210mm, 297mm);
-\pic[xscale=-1, yscale=-1, transform shape] at (105mm+\smallvertdist,260mm-4\smallhorizdist) {othercardfrontprintable={Images/solid_g_rotated.png}{BasketBrown}{}{}};
-\pic[xscale=-1,  yscale=-1, transform shape] at (105mm+\smallvertdist,260mm-3\smallhorizdist) {othercardfrontprintable={Images/solid_p_rotated.png}{BasketBrown}{}{}};
-\pic[xscale=-1,  yscale=-1, transform shape] at (105mm+\smallvertdist,260mm-2\smallhorizdist) {othercardfrontprintable={Images/solid_r_rotated.png}{BasketBrown}{}{}};
-\pic[xscale=-1,  yscale=-1, transform shape] at (105mm+\smallvertdist,260mm-\smallhorizdist) {othercardfrontprintable={Images/solid_w_rotated.png}{BasketBrown}{}{}};
-\pic[xscale=-1,  yscale=-1, transform shape] at (105mm+\smallvertdist,260mm) {othercardfrontprintable={Images/solid_y_rotated.png}{BasketBrown}{}{}};
+%\pic[xscale=-1, yscale=-1, transform shape] at (105mm+\smallvertdist,260mm-4\smallhorizdist) {othercardfrontprintable={Images/solid_g_rotated.png}{BasketBrown}{}{}};
+\pic[rotate=90, transform shape] at (105mm+\smallvertdist,260mm-4\smallhorizdist) {colorcardfrontprintable={g}};
+%\pic[xscale=-1,  yscale=-1, transform shape] at (105mm+\smallvertdist,260mm-3\smallhorizdist) {othercardfrontprintable={Images/solid_p_rotated.png}{BasketBrown}{}{}};
+\pic[rotate=90, transform shape] at (105mm+\smallvertdist,260mm-3\smallhorizdist) {colorcardfrontprintable={p}};
+%\pic[xscale=-1,  yscale=-1, transform shape] at (105mm+\smallvertdist,260mm-2\smallhorizdist) {othercardfrontprintable={Images/solid_r_rotated.png}{BasketBrown}{}{}};
+\pic[rotate=90, transform shape] at (105mm+\smallvertdist,260mm-2\smallhorizdist) {colorcardfrontprintable={r}};
+%\pic[xscale=-1,  yscale=-1, transform shape] at (105mm+\smallvertdist,260mm-\smallhorizdist) {othercardfrontprintable={Images/solid_w_rotated.png}{BasketBrown}{}{}};
+\pic[rotate=90, transform shape] at (105mm+\smallvertdist,260mm-\smallhorizdist) {colorcardfrontprintable={w}};
+%\pic[xscale=-1,  yscale=-1, transform shape] at (105mm+\smallvertdist,260mm) {othercardfrontprintable={Images/solid_y_rotated.png}{BasketBrown}{}{}};
+\pic[rotate=90, transform shape] at (105mm+\smallvertdist,260mm) {colorcardfrontprintable={y}};
 
 
 %\pic[xscale=-1,  yscale=-1, transform shape] at (105mm,260mm) {othercardfrontprintable={Images/solid_o_rotated.png}{BasketBrown}{}{}};
@@ -17,10 +22,10 @@
 %\pic[xscale=1, transform shape] at (105mm, 260mm-2\smallhorizdist) {othercardfrontprintable={Images/truck_o.png}{TruckOrange}{}{}};
 
 
-\pic[xscale=1, transform shape] at (105mm-\smallvertdist,260mm-4\smallhorizdist) {othercardfrontprintable={Images/truck_b.png}{TruckBlue}{}{}};
-\pic[xscale=1,transform shape] at (105mm-\smallvertdist,260mm-3\smallhorizdist) {othercardfrontprintable={Images/truck_b.png}{TruckBlue}{}{}};
-\pic[xscale=1,transform shape] at (105mm-\smallvertdist,260mm-2\smallhorizdist) {othercardfrontprintable={Images/truck_b.png}{TruckBlue}{}{}};
-\pic[xscale=1,transform shape] at (105mm-\smallvertdist,260mm-\smallhorizdist) {othercardfrontprintable={Images/truck_b.png}{TruckBlue}{}{}};
+\pic[xscale=1, transform shape] at (105mm-\smallvertdist,260mm-4\smallhorizdist) {othercardfrontprintable={Images/truck_o.png}{TruckOrange}{}{}};
+\pic[xscale=1,transform shape] at (105mm-\smallvertdist,260mm-3\smallhorizdist) {othercardfrontprintable={Images/truck_o.png}{TruckOrange}{}{}};
+\pic[xscale=1,transform shape] at (105mm-\smallvertdist,260mm-2\smallhorizdist) {othercardfrontprintable={Images/truck_o.png}{TruckOrange}{}{}};
+\pic[xscale=1,transform shape] at (105mm-\smallvertdist,260mm-\smallhorizdist) {othercardfrontprintable={Images/truck_o.png}{TruckOrange}{}{}};
 \pic[xscale=1,transform shape] at (105mm-\smallvertdist,260mm) {othercardfrontprintable={Images/truck_o.png}{TruckOrange}{}{}};
 \end{tikzpicture}
 \end{document}

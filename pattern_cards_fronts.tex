@@ -1,0 +1,26 @@
+\documentclass{standalone}
+\usepackage{balloonspectacular}
+\setmainfont[Scale=1.125]{Fredoka-Bold}
+
+\begin{document}
+\begin{tikzpicture}[x=1mm, y=1mm]
+\path (0,0) rectangle (210mm, 297mm);
+\pic[rotate=90, transform shape] at (105mm+\smallvertdist,260mm-4\smallhorizdist) {patterncardfrontprintable={Images/stripes_rl.png}};
+\pic[rotate=90, transform shape] at (105mm+\smallvertdist,260mm-3\smallhorizdist) {patterncardfrontprintable={Images/stripes_lr.png}};
+\pic[rotate=90, transform shape] at (105mm+\smallvertdist,260mm-2\smallhorizdist) {patterncardfrontprintable={Images/quincunx_tbl.png}};
+\pic[rotate=90, transform shape] at (105mm+\smallvertdist,260mm-\smallhorizdist) {patterncardfrontprintable={Images/quincunx_tbr.png}};
+\pic[rotate=90, transform shape] at (105mm+\smallvertdist,260mm) {patterncardfrontprintable={Images/quincunx.png}};
+
+
+%\pic[xscale=-1,  yscale=-1, transform shape] at (105mm,260mm) {othercardfrontprintable={Images/solid_o_rotated.png}{BasketBrown}{}{}};
+%\pic[xscale=-1,  yscale=-1, transform shape] at (105mm,260mm-\smallhorizdist) {othercardfrontprintable={Images/solid_b_rotated.png}{BasketBrown}{}{}};
+%\pic[xscale=1, transform shape] at (105mm, 260mm-2\smallhorizdist) {othercardfrontprintable={Images/truck_o.png}{TruckOrange}{}{}};
+
+
+%\pic[xscale=1, transform shape] at (105mm-\smallvertdist,260mm-4\smallhorizdist) {othercardfrontprintable={Images/truck_b.png}{TruckBlue}{}{}};
+%\pic[xscale=1,transform shape] at (105mm-\smallvertdist,260mm-3\smallhorizdist) {othercardfrontprintable={Images/truck_b.png}{TruckBlue}{}{}};
+%\pic[xscale=1,transform shape] at (105mm-\smallvertdist,260mm-2\smallhorizdist) {othercardfrontprintable={Images/truck_b.png}{TruckBlue}{}{}};
+\pic[rotate=90,transform shape] at (105mm-\smallvertdist,260mm-\smallhorizdist) {patterncardfrontprintable={Images/quincunx_tl.png}};
+\pic[rotate=90,transform shape] at (105mm-\smallvertdist,260mm) {patterncardfrontprintable={Images/quincunx_tr.png}};
+\end{tikzpicture}
+\end{document}
