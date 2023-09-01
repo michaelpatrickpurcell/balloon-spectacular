@@ -22,25 +22,33 @@
 
 \foreach \x in {0, -4, ..., -44}
 {
-  \node[cardposition, dashed, rotate=90] at (\x, -6) {};
+  \node[cardposition, dashed, rotate=90] at (\x, -5) {};
 }
 
 \foreach \x in {-32, -36, -40, -44} {
-	\node[truckcard] at (\x, -6) {\includegraphics[width=3.25in]{Images/truck_b.png}};
+	\node[truckcard] at (\x, -5) {\includegraphics[width=3.25in]{Images/safety_truck.png}};
 %	\node[cardposition] at (\x, -5.5) {};
 }
 
 
 %\foreach \x in {-5, -5.25, ..., -6}
 %	\node[ballooncard, rotate=90] at (\x, -9.25) {\includegraphics[height=3.25in]{Images/grid_py.png}};
-\node[truckcard] at (-44, -9.25) {\includegraphics[width=3.25in]{Images/safety_truck.png}};	
+%\node[truckcard] at (-44, -9.25) {\includegraphics[width=3.25in]{Images/safety_truck.png}};	
 %	\node[inner sep=1.5in] at (-22, 21) {{\setmainfont[Scale=12.0]{Oi}\Huge Aloft}};
 
-\foreach \i/\j in {-46/diag_wy_labels.png, -42/grid_rw_labels.png, -38/horiz_pr_labels.png, -34/vert_gy_labels.png, -30/vert_pw_labels.png, -26/diag_gp_labels.png, -22/vert_ry_labels.png, -18/grid_py_labels.png, -14/horiz_gw_labels.png, -10/diag_gr_labels.png, -6/lion_labels.png, -2/monkey_labels.png, 2/wolf_labels.png}
+\node[cardposition, rotate=90] at (-32, -5) {\includegraphics[height=3.25in]{Images/lion_labels.png}};
+
+\foreach \i/\j in {-38/diag_wy_labels.png, -34/grid_rw_labels.png, -30/horiz_pr_labels.png, -26/vert_gy_labels.png, -22/vert_pw_labels.png, -18/diag_gp_labels.png, -14/vert_ry_labels.png, -10/grid_py_labels.png, -6/horiz_gw_labels.png}
 \node[cardposition, rotate=90] at (\i, -15) {\includegraphics[height=3.25in]{Images/\j}};
 
-\foreach \i/\k in {-15.5/scoring_token_1.png, -14/scoring_token_2.png, -12.5/scoring_token_3.png,-11/scoring_token_4.png, -9.5/scoring_token_5.png, -8/scoring_token_6.png, -6.5/scoring_token_7.png,-5/scoring_token_8.png, -3.5/scoring_token_9.png, -2/scoring_token_10.png, -0.5/scoring_token_11.png,1/scoring_token_12.png, 2.5/scoring_token_13.png}
-\node at (\i,-12) {\includegraphics[width=50mm]{Images/\k}};
+\foreach \i/\j in {-36/monkey_labels.png, -32/wolf_labels.png, -28/diag_gr_labels.png, -24/grid_bg_labels.png, -20/vert_bp_labels.png, -16/diag_br_labels.png, -12/horiz_by_labels.png, -8/grid_bw_labels.png}
+\node[cardposition, rotate=90] at (\i, -12) {\includegraphics[height=3.25in]{Images/\j}};
+
+\foreach \i/\j in {-32/stripes_rl_display.png, -28/quincunx_tr_display.png, -24/quincunx_tbr_display.png, -20/quincunx_tbl_display.png, -16/quincunx_tbl_display.png, -12/stripes_lr_display.png}
+\node at (\i, -8.5) {\includegraphics[width=3.5in]{Images/\j}};
+
+%\foreach \i/\k in {-15.5/scoring_token_1.png, -14/scoring_token_2.png, -12.5/scoring_token_3.png,-11/scoring_token_4.png, -9.5/scoring_token_5.png, -8/scoring_token_6.png, -6.5/scoring_token_7.png,-5/scoring_token_8.png, -3.5/scoring_token_9.png, -2/scoring_token_10.png, -0.5/scoring_token_11.png,1/scoring_token_12.png, 2.5/scoring_token_13.png}
+%\node at (\i,-12) {\includegraphics[width=50mm]{Images/\k}};
 
 \end{tikzpicture}
 

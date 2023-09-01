@@ -5,7 +5,8 @@
 
 \begin{document}
 \begin{tikzpicture}
-\pic at (0,0) {colorcardfrontprintable={b}};
-%\pic at (0,0) {patterncardfrontprintable={Images/quincunx_tbl.png}};
+%\pic at (0,0) {colorcardfrontprintable={b}};
+\pic[rotate=90, transform shape, inner sep=0pt] at (0,0) {patterncardfrontdisplay={Images/stripes_lr.png}};
+\node[smallcardposition, rotate=90] at (0,0) {};
 \end{tikzpicture}
 \end{document}

@@ -307,6 +307,32 @@
 		\pic () at (0,0) {smallcutguide={black}};
 }}
 
+\tikzset{patterncardfrontdisplay/.pic={%
+		\begin{scope}
+		\clip[rounded corners=3mm] (-\smallcardwidth/2 - \smallbleed, 0in) --%
+		      (-\smallcardwidth/2 - \smallbleed, \smallcardheight/2 + \smallbleed) --%
+		      (\smallcardwidth/2 + \smallbleed, \smallcardheight/2 + \smallbleed) --%
+		      (\smallcardwidth/2 + \smallbleed, -\smallcardheight/2 - \smallbleed) --%
+		      (-\smallcardwidth/2 - \smallbleed, -\smallcardheight/2 - \smallbleed) --%
+		      cycle;
+
+		\path[draw, ultra thick, rounded corners=3mm] (-\smallcardwidth/2 - \smallbleed, 0in) --%
+		      (-\smallcardwidth/2 - \smallbleed, \smallcardheight/2 + \smallbleed) --%
+		      (\smallcardwidth/2 + \smallbleed, \smallcardheight/2 + \smallbleed) --%
+		      (\smallcardwidth/2 + \smallbleed, -\smallcardheight/2 - \smallbleed) --%
+		      (-\smallcardwidth/2 - \smallbleed, -\smallcardheight/2 - \smallbleed) --%
+		      cycle;
+
+		% Pattern for card front
+		\node[rotate=-90] () at (0,0) {\includegraphics[width=\smallcardheight+2\smallbleed]{Images/pattern_card_background3.png}};
+
+		\node[rotate=-90] () at (0,0) {\includegraphics[width=\smallcardheight]{#1}};				
+		\end{scope}
+		% Cutting guides for corners of the cards	
+		\pic () at (0,0) {smallcutguide={black}};
+}}
+
+
 \tikzset{colorcardfrontprintable/.pic={%
 		\begin{scope}
 		\clip (-\smallcardwidth/2 - \smallbleed, 0in) --%
