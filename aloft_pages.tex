@@ -10,6 +10,10 @@
 \hyphenpenalty=1
 \hbadness=10000
 
+\usepackage{caption}
+\captionsetup{justification=raggedright,
+              singlelinecheck=false}
+
 \usepackage{fontspec}
 \setmainfont{Tex Gyre Schola}
 %\setmainfont{Qwigley}
@@ -238,9 +242,36 @@ Throughout the game, each balloon will advance through a series of states: packe
 
 \newpage
 \enlargethispage{1.75\baselineskip}
+\subsection*{Claim a Pattern Card}
+
+To claim a pattern card, place one unclaimed pattern card face up in front of you.
+
+If the pattern depicted on that pattern card appears in the final formation, you will score ten points. See \textcolor{SunriseBlue}{\setmainfont{Fredoka-Bold}Pattern Scoring} for details.
+
+%\newpage
+%\enlargethispage{1.75\baselineskip}
+
 \section*{Scoring}
+Your score will be determined by the positions of the balloons at the end of the game, i.e. where each balloon is in the final formation.
+
+There are two ways to score points: pattern scoring and color scoring. The player with the highest combined score wins the game.
+
 %Each balloon scores a number of points that is determined by its position within the formation. In general, balloons that are flying at higher altitudes score more points than those that are flying at lower alititudes.  If balloons are flying at the same altitude, then the balloons that are closer to the front (right-hand side) of the formation score more points than the balloons that are closer to the back (left-hand side) of the formation. 
 
+\newpage
+\enlargethispage{1.75\baselineskip}
+
+\subsection*{Pattern Scoring}
+We say that a pattern appears in the final formation if there is a set of five balloons whose relative positions match those of the balloons depicted on the corresponding pattern card. 
+
+For every pattern that appears in the final formation, you will score ten points if you claimed the corresponding pattern card.
+
+There is no penalty for having claimed a pattern card for a pattern that does not appear in the final formation.
+
+\newpage
+\enlargethispage{1.75\baselineskip}
+
+\subsection*{Color Scoring}
 Use the scoring tokens to indicate the number of points scored by each balloon.
 \begin{enumerate}
   \item Place the scoring token numbered ``1'' on the leftmost balloon in the bottom row of the formation.
@@ -250,11 +281,15 @@ Use the scoring tokens to indicate the number of points scored by each balloon.
 
 %Notice that the leftmost balloon in the bottom row of the formation always scores one point while the rightmost balloon in the top row of the formation scores one point for every balloon that is flying at the end of the game. See the figure below for a more complete example.
 
-Your score is the sum of the scores for all of the balloons with which you are affiliated (i.e. that match your color card). The player with the highest score wins the game.
+Your color score is the sum of the scores for the balloons on which your color appears.
 
-\begin{center}
+\vfill
+
+\begin{figure}[hb]
+\centering
 \includegraphics[scale=0.115]{scoring_diagram.jpg}
-\end{center}
+\caption*{\textbf{Example:} In this case, the red player's color score is 28: 12 points for {\setmainfont{Playball}RW}, 8 points for {\setmainfont{Playball}PR},\\6 points for {\setmainfont{Playball}GR}, and 2 points for {\setmainfont{Playball}RY}.}
+\end{figure}
 
 \newpage
 \enlargethispage{1.75\baselineskip}
@@ -264,7 +299,7 @@ Aloft can also be played as a one-player game.
 \blfootnote{\textbf{License}: \raggedright\doclicenseLongText}
 This is similar to the multi-player version, differing in the following ways:
 \begin{itemize}
-  \item You will not use the color cards or the scoring tokens. You will only use two of the special shape balloon cards.
+  \item You will not use the color cards or the scoring tokens.% You will only use two of the special shape balloon cards.
   \item You will shuffle the balloon cards before dealing them out in a single row below the game board. If you choose to unpack a balloon on a given turn, you must unpack the first (leftmost) remaining balloon.
   \item Balloons that are flying and that share a color may never be diagonally adjacent to one another.
   \item Your score is equal to the number of adjacent columns required to contain the formation plus a three point penalty for every balloon which you failed to launch.
