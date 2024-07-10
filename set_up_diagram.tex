@@ -1,14 +1,23 @@
 \documentclass{standalone}
-\usepackage{balloonspectacular}
+%\usepackage{balloonspectacular}
+
+\usepackage{tikz}
+
+\tikzset{cardposition/.style={inner sep=0pt, minimum width=2.5cm, minimum height=3.5cm, draw, very thick, rounded corners = 1.25mm}}
+
+\tikzset{truckcard/.style={inner sep=0pt, minimum width=3.5cm, minimum height=2.5cm, draw, very thick, rounded corners = 1.25mm, xscale=1, fill=lightgray!50}}
+
+\tikzset{ballooncard/.style={inner sep=0pt, minimum width=2.5cm, minimum height=3.5cm, draw, very thick, rounded corners = 1.25mm, xscale=-1, fill=SkyBlue!50}}
+
 
 \begin{document}
 
-\begin{tikzpicture}[x=1in, y=1in]
-\path[fill=white] (-47.25, -11.5) rectangle (3.25, 15.5);
+\begin{tikzpicture}[x=1cm, y=1cm]
+\path (-49.75, -11.5) rectangle (5.75, 15.5);
 
 %\path[draw, ultra thick, rounded corners=3mm, fill=YellowGreen!50] (-46.25, -2.75) rectangle (2.25, 15.5);
 
-\node at (-22, 6.375) {\includegraphics[height=18.25in]{Images/play_area_background.png}};
+\node at (-22, 6.375) {\includegraphics[height=18.25cm]{Images/play_area_background_small.png}};
 
 \foreach \x in {0, -4,-8,...,-44}
  \foreach \y in {0, 4.25, ..., 12.75}
@@ -20,15 +29,16 @@
 %\foreach \x/\i in {-44/1, -40/2, -36/3, -32/4, -28/5, -24/6, -20/7, -16/8, -12/9, -8/10, -4/11, 0/12}
 %	\node[inner sep = 2cm] at (\x, 17) {{\setmainfont[Scale=5.0]{Titan One}\Huge \i}};
 
-\foreach \x in {0, -4, ..., -44}
+\foreach \x in {4, 0, -4, ..., -44}
 {
   \node[cardposition, dashed, rotate=90] at (\x, -5) {};
 }
 
 \foreach \x in {-32, -36, -40, -44} {
-	\node[truckcard] at (\x, -5) {\includegraphics[width=3.25in]{Images/safety_truck.png}};
+	\node[truckcard] at (\x, -5) {\includegraphics[width=3.25cm]{Images/truck_right_background.png}};
 %	\node[cardposition] at (\x, -5.5) {};
 }
+	\node[truckcard] at (-28, -5) {\includegraphics[width=3.25cm]{Images/safety_truck_right_background.png}};
 
 
 %\foreach \x in {-5, -5.25, ..., -6}
@@ -36,16 +46,16 @@
 %\node[truckcard] at (-44, -9.25) {\includegraphics[width=3.25in]{Images/safety_truck.png}};	
 %	\node[inner sep=1.5in] at (-22, 21) {{\setmainfont[Scale=12.0]{Oi}\Huge Aloft}};
 
-\node[cardposition, rotate=90] at (-32, -5) {\includegraphics[height=3.25in]{Images/lion_labels.png}};
+%\node[cardposition, rotate=90] at (-32, -5) {\includegraphics[height=3.25in]{Images/lion_labels.png}};
 
 \foreach \i/\j in {-38/diag_wy_labels.png, -34/grid_rw_labels.png, -30/horiz_pr_labels.png, -26/vert_gy_labels.png, -22/vert_pw_labels.png, -18/diag_gp_labels.png, -14/vert_ry_labels.png, -10/grid_py_labels.png, -6/horiz_gw_labels.png}
-\node[cardposition, rotate=90] at (\i, -15) {\includegraphics[height=3.25in]{Images/\j}};
+\node[cardposition] at (\i, -13) {\includegraphics[height=3.25cm]{Images/\j}};
 
-\foreach \i/\j in {-36/monkey_labels.png, -32/wolf_labels.png, -28/diag_gr_labels.png, -24/grid_bg_labels.png, -20/vert_bp_labels.png, -16/diag_br_labels.png, -12/horiz_by_labels.png, -8/grid_bw_labels.png}
-\node[cardposition, rotate=90] at (\i, -12) {\includegraphics[height=3.25in]{Images/\j}};
+\foreach \i/\j in {-38/lion_labels.png, -34/monkey_labels.png, -30/wolf_labels.png, -26/diag_gr_labels.png, -22/grid_bg_labels.png, -18/vert_bp_labels.png, -14/diag_br_labels.png, -10/horiz_by_labels.png, -6/grid_bw_labels.png}
+\node[cardposition] at (\i, -9) {\includegraphics[height=3.25cm]{Images/\j}};
 
-\foreach \i/\j in {-32/stripes_rl_display.png, -28/quincunx_tr_display.png, -24/quincunx_tbr_display.png, -20/quincunx_tbl_display.png, -16/quincunx_tbl_display.png, -12/stripes_lr_display.png}
-\node at (\i, -8.5) {\includegraphics[width=3.5in]{Images/\j}};
+%\foreach \i/\j in {-32/stripes_rl_display.png, -28/quincunx_tr_display.png, -24/quincunx_tbr_display.png, -20/quincunx_tbl_display.png, -16/quincunx_tbl_display.png, -12/stripes_lr_display.png}
+%\node at (\i, -8.5) {\includegraphics[width=3.5in]{Images/\j}};
 
 %\foreach \i/\k in {-15.5/scoring_token_1.png, -14/scoring_token_2.png, -12.5/scoring_token_3.png,-11/scoring_token_4.png, -9.5/scoring_token_5.png, -8/scoring_token_6.png, -6.5/scoring_token_7.png,-5/scoring_token_8.png, -3.5/scoring_token_9.png, -2/scoring_token_10.png, -0.5/scoring_token_11.png,1/scoring_token_12.png, 2.5/scoring_token_13.png}
 %\node at (\i,-12) {\includegraphics[width=50mm]{Images/\k}};

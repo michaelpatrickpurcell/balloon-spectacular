@@ -10,6 +10,7 @@
 \hyphenpenalty=1
 \hbadness=10000
 
+\usepackage{booktabs}
 \usepackage{caption}
 \captionsetup{justification=raggedright,
               singlelinecheck=false}
@@ -107,7 +108,7 @@
 \ClearShipoutPicture
 \enlargethispage{1.75\baselineskip}
 \section*{Overview}
-Aloft is a game for one to six players. It can be played in about thirty minutes and is intended for players who are at least eight years old.
+Aloft is a game for two to six players. It can be played in about thirty minutes and is intended for players who are at least eight years old.
 
 During the game, you will launch a flight of hot-air balloons. You will try to ensure that your balloons end up in the best positions in the resulting formation.
 
@@ -119,9 +120,14 @@ During the game, you will launch a flight of hot-air balloons. You will try to e
       \item 3 special shape balloon cards
     \end{itemize}
   \item 18 scoring tokens
-  \item 4 truck cards
+  \item 41 achievement tokens
+  \begin{itemize}
+  	\item 33 launch tokens
+  	\item 8 safety tokens
+  \end{itemize}
   \item 6 color cards
-  \item 6 pattern cards
+  \item 5 truck cards
+%  \item 6 pattern cards
   \item 1 panoramic game board
 \end{itemize}
 
@@ -131,25 +137,27 @@ During the game, you will launch a flight of hot-air balloons. You will try to e
 \section*{Set Up}
 \begin{enumerate}
 
-  \item Deal one color card at random to each player.
+  \item In a two or three-player game, give each player two color cards. Otherwise, give each player one color card.
 %  Your color card will determine the color of balloons with which you are \emph{affiliated}.
-  Do not reveal this card to the other players until the end of the game.
+  Do not reveal your color card(s) to the other players.
 
 %Each regular balloon card is \emph{affiliated} with two of the five possible colors.  The colors that a balloon card is affiliated with are the colors of the envelope of the balloon depicted on that card. Special shape cards are not affiliated with any color.
  
-  \item Place the truck cards in a single row below the four leftmost columns of the the game board.% These truck cards comprise the \emph{launch zone}. The leftmost truck card is called the \emph{last truck}. The rightmost truck card in the launch zone is called the \emph{lead truck}.
+  \item Place the truck cards in a single row below the five leftmost columns of the the game board. The orange safety truck should be the lead (rightmost) truck.% These truck cards comprise the \emph{launch zone}. The leftmost truck card is called the \emph{last truck}. The rightmost truck card in the launch zone is called the \emph{lead truck}.
 
 %  \item Place the safety truck card below leftmost launch zone truck card.
-   \item Display the pattern cards in a single row below the launch zone.
+%   \item Display the pattern cards in a single row below the launch zone.
 %  \item Collect the regular balloon cards and special shape cards that you will use during your game. These cards will comprise the \emph{balloon deck}.
+	
+  \item Sort the achievement tokens and place them to one side of the play area.
 
   \item Display the balloon cards at the bottom of the play area. 
 
-  \item Place one of the special-shape balloon cards horizontally on the lead truck.%the scoring tokens nearby for use when scoring at the end of the game.
+%  \item Place one of the special-shape balloon cards horizontally on the lead truck.%the scoring tokens nearby for use when scoring at the end of the game.
 %![Set up for a four-player game.](set_up_diagram.jpg)
 \end{enumerate}
 \begin{center}
-\includegraphics[scale=0.105]{Images/set_up_diagram.png}
+\includegraphics[width=\textwidth]{Images/set_up_diagram_revised.png}
 \end{center}
 
 \newpage
@@ -159,7 +167,7 @@ On your turn, you will perform one of the following actions:
 \begin{enumerate}[nosep]
   \item Move a truck.
   \item Advance a balloon.
-  \item Claim a pattern card.
+%  \item Claim a pattern card.
 \end{enumerate}
 
 %The game ends when the lead truck moves past the rightmost column of the game board. If this happens on your turn, you should advance a balloon as usual and then proceed to {\setmainfont{Fredoka-Bold} \textcolor{SunriseBlue}{Scoring}}.
@@ -168,11 +176,14 @@ The game ends immediately after the last balloon is launched or when no further 
 
 
 \subsection*{Move a Truck}
-To move a truck, you should move it one column to the right.
+To move a truck, you should move it forward (to the right) into the next unoccupied space.
 
-A truck may not move into a space that is occupied by another truck and may not move past the right-hand side of the game board.
+The safety truck must always be the lead (rightmost) truck. There must never be more than one empty space between the last (leftmost) truck and the lead truck.
+%The blue launch trucks may not move past the right-hand side of the game board.
 
 You may move a truck that has a balloon on it. If you do, then the balloon should accompany that truck when it moves.
+
+If you move the orange safety truck, you should collect a safety token.
 
 %If any balloons are flying, then before you advance a balloon you will move a truck. Trucks always move from left to right.
 %
@@ -220,76 +231,94 @@ You may move a truck that has a balloon on it. If you do, then the balloon shoul
 %\end{center}
 
 \subsection*{Advance a Balloon}
-Throughout the game, each balloon will advance through a series of states: packed, unpacked, inflated, and flying.
+Throughout the game, each balloon will advance through a series of states: packed, inflated, and flying. All balloons start in the packed state.
 
 %On your turn, you should advance one balloon of your choice. If you cannot advance any of the balloons, then you should skip this step.
 
 %\newpage
 %To advance a balloon, you should move it from its current state to the next.
 \begin{description}[leftmargin=0pt]
-  \item[Unpack:] To advance a balloon from the packed state to the unpacked state, place it horizontally on top of an unoccupied  truck.
+  \item[Inflate:] To inflate a balloon that is packed, place it on top of an unoccupied truck.
 %  \begin{itemize}
 %    \item You may not place a balloon on a truck that already has a balloon on it.
 %  \end{itemize}
-  \item[Inflate:] To advance a balloon from the unpacked state to the inflated state, turn it so that it is placed vertically on its truck.
-  \item[Launch:] To advance a balloon from the inflated state to the flying state, move it to the bottom row of the game board above its truck. It will then be flying at an altitude of one.
-  \item[Ascend:] To advance a balloon that is flying, move it up one row. It will then be flying at an altitude one more than before.
+%  \item[Inflate:] To advance a balloon from the unpacked state to the inflated state, turn it so that it is placed vertically on its truck.
+  \item[Launch:] To launch a balloon that has been inflated, move it to the bottom row of the game board above its truck. 
+  
+  When you launch a regular balloon, collect one launch token for each color on that balloon. When you launch a special shape balloon, collect one multicolored launch token.
+  \item[Ascend:] To advance a balloon that is flying, move it up one row. 
   \begin{itemize}
     \item Balloons that are flying may never be orthogonally adjacent to one another.% balloon which is flying.
-    \item The maximum altitude at which balloons can fly is four.
+    \item Balloons may not move off the top edge of the board.
   \end{itemize}
 \end{description}
 
 \newpage
 \enlargethispage{1.75\baselineskip}
-\subsection*{Claim a Pattern Card}
-
-To claim a pattern card, place one unclaimed pattern card face up in front of you.
-
-If the pattern depicted on that pattern card appears in the final formation, you will score ten points. See \textcolor{SunriseBlue}{\setmainfont{Fredoka-Bold}Pattern Scoring} for details.
-
-%\newpage
-%\enlargethispage{1.75\baselineskip}
-
+%\subsection*{Claim a Pattern Card}
+%
+%To claim a pattern card, place one unclaimed pattern card face up in front of you.
+%
+%If the pattern depicted on that pattern card appears in the final formation, you will score ten points. See \textcolor{SunriseBlue}{\setmainfont{Fredoka-Bold}Pattern Scoring} for details.
+%
+%%\newpage
+%%\enlargethispage{1.75\baselineskip}
+%
 \section*{Scoring}
-Your score will be determined by the positions of the balloons at the end of the game, i.e. where each balloon is in the final formation.
+%Your score will be determined by the positions of the balloons at the end of the game, i.e. where each balloon is in the final formation, and by which achievement tokens you collected during the game.
 
-There are two ways to score points: pattern scoring and color scoring. The player with the highest combined score wins the game.
+There are two ways to score, achievement scoring and formation scoring. The player with the highest combined score wins the game.
+
+\subsection*{Achievement Scoring}
+Your achievement score is determined by the achievement tokens that you collected.
+
+\begin{enumerate}
+	\item Sort your achievement tokens by type. Sort your launch tokens by color.
+	\item Discard any launch tokens that match your color card(s).
+	\item Assign each multicolored launch token a color and add it to the corresponding set.
+	\item Score points based on the size of each set of achievement tokens in your collection according to the following table.
+\end{enumerate}
+	\begin{center}
+	\begin{tabular}{lcccccc}\toprule
+	Set Size & 0 & 1 & 2 & 3 & 4 & 5+ \\\midrule
+	Points & 0 & 1 & 3 & 6 & 10 & 15\phantom{0} \\\bottomrule
+	\end{tabular}
+	\end{center}
 
 %Each balloon scores a number of points that is determined by its position within the formation. In general, balloons that are flying at higher altitudes score more points than those that are flying at lower alititudes.  If balloons are flying at the same altitude, then the balloons that are closer to the front (right-hand side) of the formation score more points than the balloons that are closer to the back (left-hand side) of the formation. 
 
+%\newpage
+%\enlargethispage{1.75\baselineskip}
+%
+%\subsection*{Pattern Scoring}
+%We say that a pattern appears in the final formation if there is a set of five balloons whose relative positions match those of the balloons depicted on the corresponding pattern card. 
+%
+%For every pattern that appears in the final formation, you will score ten points if you claimed the corresponding pattern card.
+%
+%There is no penalty for having claimed a pattern card for a pattern that does not appear in the final formation.
+%
+%\vfill
+%
+%\begin{figure}[hb]
+%\centering
+%\includegraphics[scale=0.115]{Images/pattern_scoring_diagram.png}
+%\caption*{\textbf{Example:} In this case, the positions of the {\setmainfont{Playball}GR}, {\setmainfont{Playball}PY}, {\setmainfont{Playball}WY}, {\setmainfont{Playball}GY}, and Lion balloons match the pattern depicted on pattern card (a).}
+%\end{figure}
+
 \newpage
 \enlargethispage{1.75\baselineskip}
 
-\subsection*{Pattern Scoring}
-We say that a pattern appears in the final formation if there is a set of five balloons whose relative positions match those of the balloons depicted on the corresponding pattern card. 
-
-For every pattern that appears in the final formation, you will score ten points if you claimed the corresponding pattern card.
-
-There is no penalty for having claimed a pattern card for a pattern that does not appear in the final formation.
-
-\vfill
-
-\begin{figure}[hb]
-\centering
-\includegraphics[scale=0.115]{Images/pattern_scoring_diagram.png}
-\caption*{\textbf{Example:} In this case, the positions of the {\setmainfont{Playball}GR}, {\setmainfont{Playball}PY}, {\setmainfont{Playball}WY}, {\setmainfont{Playball}GY}, and Lion balloons match the pattern depicted on pattern card (a).}
-\end{figure}
-
-\newpage
-\enlargethispage{1.75\baselineskip}
-
-\subsection*{Color Scoring}
+\subsection*{Formation Scoring}
 Use the scoring tokens to indicate the number of points scored by each balloon.
 \begin{enumerate}
-  \item Place the scoring token numbered ``1'' on the leftmost balloon in the bottom row of the formation.
+  \item Place the scoring token numbered ``1'' on the leftmost balloon in the bottom row of the final formation.
   \item Scanning from left to right and bottom to top, place scoring tokens on the other balloons in the formation, placing the token with lowest remaining number on each balloon as you encounter it.
 %  \item Proceed to the next highest row of the formation. Continue in this fashion, scanning from left to right and bottom to top, until each balloon that is flying has been assigned a scoring token.
 \end{enumerate}
 
 %Notice that the leftmost balloon in the bottom row of the formation always scores one point while the rightmost balloon in the top row of the formation scores one point for every balloon that is flying at the end of the game. See the figure below for a more complete example.
 
-Your color score is the sum of the scores for the balloons on which your color appears.
+Your formation score is the sum of the scores for balloons on which your color(s) appear.
 
 \vfill
 
@@ -299,19 +328,20 @@ Your color score is the sum of the scores for the balloons on which your color a
 \caption*{\textbf{Example:} In this case, the red player's color score is 28: 12 points for {\setmainfont{Playball}RW}, 8 points for {\setmainfont{Playball}PR},\\6 points for {\setmainfont{Playball}GR}, and 2 points for {\setmainfont{Playball}RY}.}
 \end{figure}
 
-\newpage
-\enlargethispage{1.75\baselineskip}
-\section*{Solo Mode}
-Aloft can also be played as a one-player game.
-\blfootnote{\textbf{Contact}: \href{mailto:aloft.board.game@gmail.com}{aloft.board.game@gmail.com}}
-\blfootnote{\textbf{License}: \raggedright\doclicenseLongText}
-This is similar to the multi-player version, differing in the following ways:
-\begin{itemize}
-  \item You will not use the color cards or the scoring tokens.% You will only use two of the special shape balloon cards.
-  \item You will shuffle the balloon cards before dealing them out in a single row below the game board. If you choose to unpack a balloon on a given turn, you must unpack the first (leftmost) remaining balloon.
-  \item Balloons that are flying and that share a color may never be diagonally adjacent to one another.
-  \item Your score is equal to the number of adjacent columns required to contain the formation plus a three point penalty for every balloon which you failed to launch.
-\end{itemize}
+%\newpage
+%\enlargethispage{1.75\baselineskip}
+%\section*{Solo Mode}
+%Aloft can also be played as a one-player game.
+%\blfootnote{\textbf{Contact}: \href{mailto:aloft.board.game@gmail.com}{aloft.board.game@gmail.com}}
+%\blfootnote{\textbf{License}: \raggedright\doclicenseLongText}
+%This is similar to the multi-player version, differing in the following ways:
+%\begin{itemize}
+%  \item You will not use the color cards or the scoring tokens.% You will only use two of the special shape balloon cards.
+%  \item You will shuffle the balloon cards before dealing them out in a single row below the game board. If you choose to unpack a balloon on a given turn, you must unpack the first (leftmost) remaining balloon.
+%  \item Balloons that are flying and that share a color may never be diagonally adjacent to one another.
+%  \item Your score is equal to the number of adjacent columns required to contain the formation plus a three point penalty for every balloon which you failed to launch.
+%\end{itemize}
+
  \newpage
  \AddToShipoutPictureBG{
 \begin{tikzpicture}[remember picture, overlay]

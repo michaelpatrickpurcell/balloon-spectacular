@@ -6,7 +6,7 @@
    - Each balloon has two colours, so you can't be sure how your actions might affect other players. 
 
 2) **Simplicity** - Aloft is easy to play and quick to set up and put away.
-   - On each turn, a player does two things: move a truck and advance a balloon.
+   - On each turn, a player does one thing: move a truck or advance a balloon.
    - Set up involves: laying out the board, placing the trucks in postiion, and dealing a random colour card to each player.
 
 3) **Beauty** - Aloft is both beautiful and versatile.
@@ -16,3 +16,6 @@
 
    ## Emergency Video Link
    https://youtu.be/KMMSTWWlmJE
+
+
+   
