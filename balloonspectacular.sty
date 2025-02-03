@@ -96,6 +96,12 @@
 \definecolor{TruckOrange}{HTML}{FF7A2D}
 \definecolor{PinkSky}{HTML}{FCD0B9}
 
+\definecolor{BalloonRed}{HTML}{c32a38}
+\definecolor{BalloonYellow}{HTML}{f4d632}
+\definecolor{BalloonGreen}{HTML}{99b52a}
+\definecolor{BalloonBlue}{HTML}{6faee1}
+\definecolor{BalloonPurple}{HTML}{8b6fd2}
+\definecolor{BalloonWhite}{HTML}{ffffff}
 
 \tikzset{pics/ballooncardfrontprintable/.style n args={4}{%
 	code={
@@ -119,6 +125,30 @@
 		\pic () at (0,0) {smallcutguide={black}};
 
 }}}
+
+\tikzset{pics/balloonsticker/.style n args={4}{%
+	code={
+		\begin{scope}
+		\clip (-\smallcardwidth/2 - \smallbleed, 0in) --%
+		      (-\smallcardwidth/2 - \smallbleed, \smallcardheight/2 + \smallbleed) --%
+		      (\smallcardwidth/2 + \smallbleed, \smallcardheight/2 + \smallbleed) --%
+		      (\smallcardwidth/2 + \smallbleed, -\smallcardheight/2 - \smallbleed) --%
+		      (-\smallcardwidth/2 - \smallbleed, -\smallcardheight/2 - \smallbleed) --%
+		      cycle;
+
+		% Pattern for card front
+%		\node () at (0,0) {\includegraphics[width=\smallcardwidth]{Images/background_clouds.png}};
+
+		\node () at (0,0) {\includegraphics[height=45mm]{#1}};
+		\node at (0mm,8mm) {{\setmainfont[Scale=1.75]{Playball} \Huge \contour{black}{\textcolor{white}{#3}}}};
+		\node at (15mm,-25mm) {\Huge #4};
+				
+		\end{scope}
+		% Cutting guides for corners of the cards	
+		\pic () at (0,0) {smallcutguide={white}};
+
+}}}
+
 
 \tikzset{pics/ballooncardbackprintable/.style n args={4}{%
 	code={
@@ -307,6 +337,36 @@
 		\pic () at (0,0) {smallcutguide={black}};
 }}
 
+\tikzset{pics/specialmovecardfrontprintable/.style n args={3}{%
+code={
+		\begin{scope}
+		\clip (-\smallcardwidth/2 - \smallbleed, 0in) --%
+		      (-\smallcardwidth/2 - \smallbleed, \smallcardheight/2 + \smallbleed) --%
+		      (\smallcardwidth/2 + \smallbleed, \smallcardheight/2 + \smallbleed) --%
+		      (\smallcardwidth/2 + \smallbleed, -\smallcardheight/2 - \smallbleed) --%
+		      (-\smallcardwidth/2 - \smallbleed, -\smallcardheight/2 - \smallbleed) --%
+		      cycle;
+
+%		\path[fill=BlueSky] (-\smallcardwidth/2 - \smallbleed, 0in) --%
+%		      (-\smallcardwidth/2 - \smallbleed, \smallcardheight/2 + \smallbleed) --%
+%		      (\smallcardwidth/2 + \smallbleed, \smallcardheight/2 + \smallbleed) --%
+%		      (\smallcardwidth/2 + \smallbleed, -\smallcardheight/2 - \smallbleed) --%
+%		      (-\smallcardwidth/2 - \smallbleed, -\smallcardheight/2 - \smallbleed) --%
+%		      cycle;
+
+		% Pattern for card front
+		\node[rotate=180, transform shape] () at (0,0) {\includegraphics[width=\smallcardwidth+2\smallbleed, height=\smallcardheight+2\smallbleed]{Images/pattern_card_background3.png}};
+
+		\node at (0, 25mm) {\setmainfont[Scale=1.125]{Fredoka-Bold}\huge #2};
+		\node at (0, 17.5mm) {\setmainfont[Scale=1.125]{Fredoka-Bold}\huge #3};
+
+		\node () at (0,-9mm) {\includegraphics[width=0.8\smallcardwidth]{#1}};				
+		\end{scope}
+		% Cutting guides for corners of the cards	
+		\pic () at (0,0) {smallcutguide={black}};
+}}}
+
+
 \tikzset{patterncardfrontdisplay/.pic={%
 		\begin{scope}
 		\clip[rounded corners=3mm] (-\smallcardwidth/2 - \smallbleed, 0in) --%
@@ -356,4 +416,24 @@
 		\end{scope}
 		% Cutting guides for corners of the cards	
 		\pic () at (0,0) {smallcutguide={black}};
+}}
+
+
+\tikzset{tilesticker/.pic={%
+		\begin{scope}
+		\clip (-\smallcardwidth/2 - \smallbleed, 0in) --%
+		      (-\smallcardwidth/2 - \smallbleed, \smallcardheight/2 + \smallbleed) --%
+		      (\smallcardwidth/2 + \smallbleed, \smallcardheight/2 + \smallbleed) --%
+		      (\smallcardwidth/2 + \smallbleed, -\smallcardheight/2 - \smallbleed) --%
+		      (-\smallcardwidth/2 - \smallbleed, -\smallcardheight/2 - \smallbleed) --%
+		      cycle;
+
+
+		% Pattern for card front
+		\node[opacity=0.75] () at (0,0) {\includegraphics[height=\smallcardheight+2\bleed, width=\smallcardwidth+2\bleed]{Images/tile_background.png}};
+
+%		\node[rotate=90] () at (0,0) {\includegraphics[width=\smallcardheight]{Images/solid_#1_rotated.png}};				
+		\end{scope}
+		% Cutting guides for corners of the cards	
+%		\pic () at (0,0) {smallcutguide={black}};
 }}

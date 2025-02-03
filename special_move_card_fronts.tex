@@ -1,0 +1,46 @@
+\documentclass{standalone}
+\usepackage{balloonspectacular}
+\setmainfont[Scale=1.125]{Fredoka-Bold}
+
+\setlength{\smallhorizspace}{1.5mm}
+\setlength{\smallhorizdist}{\smallcardwidth + 2\smallbleed + \smallhorizspace}
+\setlength{\smallvertspace}{1.5mm}
+\setlength{\smallvertdist}{\smallcardheight + 2\smallbleed + \smallvertspace}
+
+\begin{document}
+\begin{tikzpicture}[x=1mm, y=1mm]
+%\pic[rotate=90, transform shape] at (105mm-\smallvertdist,260mm) {patterncardfrontprintable={Images/stripes_rl.png}};
+%\pic[rotate=90, transform shape] at (105mm,260mm) {patterncardfrontprintable={Images/stripes_lr.png}};
+%\pic[rotate=90, transform shape] at (105mm+\smallvertdist,260mm) {patterncardfrontprintable={Images/quincunx_tbl.png}};
+%\pic[rotate=90, transform shape] at (105mm-\smallvertdist,260mm-\smallhorizdist) {patterncardfrontprintable={Images/quincunx_tbr.png}};
+%\pic[rotate=90,transform shape] at (105mm,260mm-\smallhorizdist) {patterncardfrontprintable={Images/quincunx_tl.png}};
+%\pic[rotate=90,transform shape] at (105mm+\smallvertdist,260mm-\smallhorizdist) {patterncardfrontprintable={Images/quincunx_tr.png}};
+
+\pic[rotate=90, transform shape] at (105mm-\smallvertdist,260mm-0\smallhorizdist) {specialmovecardfrontprintable={Images/diagonal_move.png}{Diagonal}{Move}};
+\pic[rotate=90, transform shape] at (105mm,260mm-0\smallhorizdist) {specialmovecardfrontprintable={Images/diagonal_move.png}{Diagonal}{Move}};
+\pic[rotate=90, transform shape] at (105mm+\smallvertdist,260mm-0\smallhorizdist) {specialmovecardfrontprintable={Images/diagonal_move.png}{Diagonal}{Move}};
+
+\pic[rotate=90, transform shape] at (105mm-\smallvertdist,260mm-\smallhorizdist) {specialmovecardfrontprintable={Images/diagonal_move.png}{Diagonal}{Move}};
+\pic[rotate=90, transform shape] at (105mm,260mm-\smallhorizdist) {specialmovecardfrontprintable={Images/diagonal_move.png}{Diagonal}{Move}};
+\pic[rotate=90, transform shape] at (105mm+\smallvertdist,260mm-\smallhorizdist) {specialmovecardfrontprintable={Images/diagonal_move.png}{Diagonal}{Move}};
+
+\pic[rotate=90, transform shape] at (105mm-\smallvertdist,260mm-2\smallhorizdist) {specialmovecardfrontprintable={Images/diagonal_move.png}{Diagonal}{Move}};
+\pic[rotate=90, transform shape] at (105mm,260mm-2\smallhorizdist) {specialmovecardfrontprintable={Images/diagonal_move.png}{Diagonal}{Move}};
+\pic[rotate=90, transform shape] at (105mm+\smallvertdist,260mm-2\smallhorizdist) {specialmovecardfrontprintable={Images/diagonal_move.png}{Diagonal}{Move}};
+
+\pic[rotate=90, transform shape] at (105mm-\smallvertdist,260mm-3\smallhorizdist) {specialmovecardfrontprintable={Images/diagonal_move.png}{Diagonal}{Move}};
+\pic[rotate=90, transform shape] at (105mm,260mm-3\smallhorizdist) {specialmovecardfrontprintable={Images/diagonal_move.png}{Diagonal}{Move}};
+\pic[rotate=90, transform shape] at (105mm+\smallvertdist,260mm-3\smallhorizdist) {specialmovecardfrontprintable={Images/diagonal_move.png}{Diagonal}{Move}};
+
+\pic[rotate=90, transform shape] at (105mm-\smallvertdist,260mm-4\smallhorizdist) {specialmovecardfrontprintable={Images/diagonal_move.png}{Diagonal}{Move}};
+\pic[rotate=90, transform shape] at (105mm,260mm-4\smallhorizdist) {specialmovecardfrontprintable={Images/diagonal_move.png}{Diagonal}{Move}};
+\pic[rotate=90, transform shape] at (105mm+\smallvertdist,260mm-4\smallhorizdist) {specialmovecardfrontprintable={Images/diagonal_move.png}{Diagonal}{Move}};
+
+\pic[rotate=90, transform shape] at (105mm-\smallvertdist,260mm-5\smallhorizdist) {specialmovecardfrontprintable={Images/diagonal_move.png}{Diagonal}{Move}};
+\pic[rotate=90, transform shape] at (105mm,260mm-5\smallhorizdist) {specialmovecardfrontprintable={Images/diagonal_move.png}{Diagonal}{Move}};
+\pic[rotate=90, transform shape] at (105mm+\smallvertdist,260mm-5\smallhorizdist) {specialmovecardfrontprintable={Images/diagonal_move.png}{Diagonal}{Move}};
+
+\path (0,0) -- (210mm, 297mm);
+
+\end{tikzpicture}
+\end{document}
