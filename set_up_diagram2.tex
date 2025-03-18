@@ -1,0 +1,54 @@
+\documentclass{standalone}
+%\usepackage{balloonspectacular}
+
+\usepackage{tikz}
+\usepackage[skins]{tcolorbox}
+
+\tikzset{cardposition/.style={inner sep=0pt, minimum width=2.5cm, minimum height=3.5cm, rounded corners=3mm, draw, thick, black, fill overzoom image=Images/tile_background.png}}
+
+\tikzset{launchsite/.style={inner sep=0pt, minimum width=2.5cm, minimum height=3.5cm, rounded corners=3mm, draw, thick, black,  fill=brown}}
+
+\tikzset{ballooncard/.style={inner sep=0pt, minimum width=2.5cm, minimum height=3.5cm, draw, very thick, rounded corners = 1.25mm, xscale=-1, fill=SkyBlue!50}}
+
+\tikzset{cloudtile/.pic={
+	\node at (0,0) {\includegraphics[height=1.5cm]{Images/cloud_tile.png}};
+}}
+
+\begin{document}
+
+\begin{tikzpicture}[x=1cm, y=1cm]
+%\path (-49.75, -11.5) rectangle (5.75, 15.5);
+
+%\path[draw, ultra thick, rounded corners=3mm, fill=YellowGreen!50] (-46.25, -2.75) rectangle (2.25, 15.5);
+
+%\node at (-22, 6.375) {\includegraphics[height=18.25cm]{Images/play_area_background_small.png}};
+
+\foreach \x in {-18.25, -15.5,...,15.5}
+	\node[cardposition, black] at (\x,12) {};
+
+\foreach \x in {-18.25, -15.5,...,12.75}
+	\node[cardposition, black] at (\x+1.375,8) {};
+ 
+\foreach \x in {-18.25, -15.5,...,10}
+	\node[cardposition, black] at (\x+2.75,4) {};
+
+\foreach \x in {-18.25, -15.5,...,7.25}
+	\node[cardposition, black] at (\x+4.125,0) {};
+
+
+
+\foreach \i/\j in {-21/diag_gp_labels.png, -18/vert_ry_labels.png, -15/grid_py_labels.png, -12/horiz_gw_labels.png, -9/diag_gr_labels.png, -6/diag_wy_labels.png, -3/grid_rw_labels.png, 0/horiz_pr_labels.png, 3/vert_gy_labels.png, 6/vert_pw_labels.png, 9/grid_bg_labels.png, 12/vert_bp_labels.png, 15/diag_br_labels.png, 18/horiz_by_labels.png, 21/grid_bw_labels.png}
+\node at (\i-1.5, -9) {\includegraphics[height=3.25cm]{Images/\j}};
+
+\node[launchsite] at (-12.75, -4) {};
+\node[launchsite] at (-7.25, -4) {};
+\node[launchsite] at (-1.75, -4) {};
+
+\pic at (-14.125,0) {cloudtile};
+\pic at (-15.5,4) {cloudtile};
+\pic at (-16.825,8) {cloudtile};
+\pic at (-18.25,12) {cloudtile};
+
+\end{tikzpicture}
+
+\end{document}

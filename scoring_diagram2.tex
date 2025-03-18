@@ -1,0 +1,73 @@
+\documentclass{standalone}
+%\usepackage{balloonspectacular}
+
+\usepackage{tikz}
+\usepackage[skins]{tcolorbox}
+
+\tikzset{cardposition/.style={inner sep=0pt, minimum width=2.5cm, minimum height=3.5cm, rounded corners=3mm, draw, thick, black, fill overzoom image=Images/tile_background.png}}
+
+\tikzset{launchsite/.style={inner sep=0pt, minimum width=2.5cm, minimum height=3.5cm, rounded corners=3mm, draw, thick, black,  fill=brown}}
+
+\tikzset{ballooncard/.style={inner sep=0pt, minimum width=2.5cm, minimum height=3.5cm, draw, very thick, rounded corners = 1.25mm, xscale=-1, fill=SkyBlue!50}}
+
+
+\begin{document}
+
+\begin{tikzpicture}[x=1cm, y=1cm]
+%\path (-49.75, -11.5) rectangle (5.75, 15.5);
+
+%\path[draw, ultra thick, rounded corners=3mm, fill=YellowGreen!50] (-46.25, -2.75) rectangle (2.25, 15.5);
+
+%\node at (-22, 6.375) {\includegraphics[height=18.25cm]{Images/play_area_background_small.png}};
+
+\foreach \x in {-18.25, -15.5,...,15.5}
+	\node[cardposition, black] at (\x,12) {};
+
+\foreach \x in {-18.25, -15.5,...,12.75}
+	\node[cardposition, black] at (\x+1.375,8) {};
+ 
+\foreach \x in {-18.25, -15.5,...,10}
+	\node[cardposition, black] at (\x+2.75,4) {};
+
+\foreach \x in {-18.25, -15.5,...,7.25}
+	\node[cardposition, black] at (\x+4.125,0) {};
+
+\node at (-11.375, 0) {\includegraphics[height=3.25cm]{Images/vert_pw_labels.png}};
+\node[circle] at (-11.375,-0.75) {\includegraphics[width=15mm]{Images/scoring_token_1.png}};
+
+\node at (-0.375, 0) {\includegraphics[height=3.25cm]{Images/vert_ry_labels.png}};
+\node[circle] at (-0.375,-0.75) {\includegraphics[width=15mm]{Images/scoring_token_2.png}};
+
+\node at (-11.375 + 1.375, 4) {\includegraphics[height=3.25cm]{Images/diag_wy_labels.png}};
+\node[circle] at (-11.375+1.375,3.25) {\includegraphics[width=15mm]{Images/scoring_token_3.png}};
+
+\node at (-11.375 + 6.875, 4) {\includegraphics[height=3.25cm]{Images/horiz_gw_labels.png}};
+\node[circle] at (-11.375+6.875,3.25) {\includegraphics[width=15mm]{Images/scoring_token_4.png}};
+
+\node at (-11.375 + 15.125, 4) {\includegraphics[height=3.25cm]{Images/diag_gp_labels.png}};
+\node[circle] at (-11.375+15.125,3.25) {\includegraphics[width=15mm]{Images/scoring_token_5.png}};
+
+\node at (-11.375-5.5, 8) {\includegraphics[height=3.25cm]{Images/diag_gr_labels.png}};
+\node[circle] at (-11.375-5.5,7.25) {\includegraphics[width=15mm]{Images/scoring_token_6.png}};
+
+\node at (-11.375+2.75, 8) {\includegraphics[height=3.25cm]{Images/grid_bw_labels.png}};
+\node[circle] at (-11.375+2.75,7.25) {\includegraphics[width=15mm]{Images/scoring_token_7.png}};
+
+\node at (-11.375+11, 8) {\includegraphics[height=3.25cm]{Images/horiz_pr_labels.png}};
+\node[circle] at (-11.375+11,7.25) {\includegraphics[width=15mm]{Images/scoring_token_8.png}};
+
+\node at (-11.375-1.375, 12) {\includegraphics[height=3.25cm]{Images/grid_py_labels.png}};
+\node[circle] at (-11.375-1.375,11.25) {\includegraphics[width=15mm]{Images/scoring_token_9.png}};
+
+\node at (-11.375+6.875, 12) {\includegraphics[height=3.25cm]{Images/vert_gy_labels.png}};
+\node[circle] at (-11.375+6.875,11.25) {\includegraphics[width=15mm]{Images/scoring_token_10.png}};
+
+\node at (-11.375+12.375, 12) {\includegraphics[height=3.25cm]{Images/horiz_by_labels.png}};
+\node[circle] at (-11.375+12.375,11.25) {\includegraphics[width=15mm]{Images/scoring_token_11.png}};
+
+\node at (-11.375+17.875, 12) {\includegraphics[height=3.25cm]{Images/grid_rw_labels.png}};
+\node[circle] at (-11.375+17.875,11.25) {\includegraphics[width=15mm]{Images/scoring_token_12.png}};
+
+\end{tikzpicture}
+
+\end{document}

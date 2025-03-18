@@ -1,0 +1,135 @@
+\documentclass{standalone}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+
+\usepackage{fontspec}
+\setmainfont{Fredoka-Bold}
+
+\usepackage{contour}
+
+\tikzset{scoresquare/.style={minimum width=1cm, minimum height=1cm, draw, thick, white, inner sep=0pt}}
+
+\tikzset{scoresquarepic/.pic={
+	\node[scoresquare] at (0,0) {\contour{black}{\textcolor{white}{#1}}};
+}}
+
+
+\begin{document}
+\begin{tikzpicture}
+
+\node[inner sep=0pt] at (-5.5, 3) {\includegraphics[width=13cm]{Images/score_board_background.png}};
+\huge
+
+%	\node[scoresquare, black, ultra thick] at (0,0) {};
+	\node[scoresquare, black, ultra thick, minimum width=3cm] at (-1,0) {};
+%	\node[scoresquare, black, ultra thick] at (-2,0) {};
+	\node[scoresquare, black, ultra thick] at (-3,0) {};
+	\node[scoresquare, black, ultra thick] at (-4,0) {};
+	\node[scoresquare, black, ultra thick] at (-5,0) {};
+	\node[scoresquare, black, ultra thick] at (-6,0) {};
+	\node[scoresquare, black, ultra thick] at (-7,0) {};
+	\node[scoresquare, black, ultra thick] at (-8,0) {};
+	\node[scoresquare, black, ultra thick] at (-9,0) {};
+	\node[scoresquare, black, ultra thick] at (-10,0) {};
+	\node[scoresquare, black, ultra thick] at (-11,0) {};
+	\node[scoresquare, black, ultra thick] at (-11,1) {};
+	\node[scoresquare, black, ultra thick] at (-11,2) {};
+	\node[scoresquare, black, ultra thick] at (-11,3) {};
+	\node[scoresquare, black, ultra thick] at (-11,4) {};
+	\node[scoresquare, black, ultra thick] at (-11,5) {};
+	\node[scoresquare, black, ultra thick] at (-11,6) {};
+	\node[scoresquare, black, ultra thick] at (-10,6) {};
+	\node[scoresquare, black, ultra thick] at (-9,6) {};
+	\node[scoresquare, black, ultra thick] at (-8,6) {};
+	\node[scoresquare, black, ultra thick] at (-7,6) {};
+	\node[scoresquare, black, ultra thick] at (-6,6) {};
+	\node[scoresquare, black, ultra thick] at (-5,6) {};
+	\node[scoresquare, black, ultra thick] at (-4,6) {};
+	\node[scoresquare, black, ultra thick] at (-3,6) {};
+	\node[scoresquare, black, ultra thick] at (-2,6) {};
+	\node[scoresquare, black, ultra thick] at (-1,6) {};
+	\node[scoresquare, black, ultra thick] at (0,6) {};
+	\node[scoresquare, black, ultra thick] at (0,5) {};
+	\node[scoresquare, black, ultra thick] at (0,4) {};
+	\node[scoresquare, black, ultra thick] at (-1,4) {};
+	\node[scoresquare, black, ultra thick] at (-2,4) {};
+	\node[scoresquare, black, ultra thick] at (-3,4) {};
+	\node[scoresquare, black, ultra thick] at (-4,4) {};
+	\node[scoresquare, black, ultra thick] at (-5,4) {};
+	\node[scoresquare, black, ultra thick] at (-6,4) {};
+	\node[scoresquare, black, ultra thick] at (-7,4) {};
+	\node[scoresquare, black, ultra thick] at (-8,4) {};
+	\node[scoresquare, black, ultra thick] at (-9,4) {};
+	\node[scoresquare, black, ultra thick] at (-9,3) {};
+	\node[scoresquare, black, ultra thick] at (-9,2) {};
+	\node[scoresquare, black, ultra thick] at (-8,2) {};
+	\node[scoresquare, black, ultra thick] at (-7,2) {};
+	\node[scoresquare, black, ultra thick] at (-6,2) {};
+	\node[scoresquare, black, ultra thick] at (-5,2) {};
+	\node[scoresquare, black, ultra thick] at (-4,2) {};
+	\node[scoresquare, black, ultra thick] at (-3,2) {};
+	\node[scoresquare, black, ultra thick] at (-2,2) {};
+	\node[scoresquare, black, ultra thick] at (-1,2) {};
+	\node[scoresquare, black, ultra thick] at (0,2) {};
+	\node[scoresquare, black, ultra thick] at (0,1) {};
+
+
+%	\pic at (0,0) {scoresquarepic={0}};
+%	\pic at (-1,0) {scoresquarepic={0}};
+	\node[scoresquare, minimum width=3cm] at (-1,0) {\contour{black}{\textcolor{white}{0}}};
+%	\pic at (-2,0) {scoresquarepic={}};
+	\pic at (-3,0) {scoresquarepic={}};
+	\pic at (-4,0) {scoresquarepic={}};
+	\pic at (-5,0) {scoresquarepic={}};
+	\pic at (-6,0) {scoresquarepic={}};
+	\pic at (-7,0) {scoresquarepic={5}};
+	\pic at (-8,0) {scoresquarepic={}};
+	\pic at (-9,0) {scoresquarepic={}};
+	\pic at (-10,0) {scoresquarepic={}};
+	\pic at (-11,0) {scoresquarepic={}};
+	\pic at (-11,1) {scoresquarepic={10}};
+	\pic at (-11,2) {scoresquarepic={}};
+	\pic at (-11,3) {scoresquarepic={}};
+	\pic at (-11,4) {scoresquarepic={}};
+	\pic at (-11,5) {scoresquarepic={}};
+	\pic at (-11,6) {scoresquarepic={15}};
+	\pic at (-10,6) {scoresquarepic={}};
+	\pic at (-9,6) {scoresquarepic={}};
+	\pic at (-8,6) {scoresquarepic={}};
+	\pic at (-7,6) {scoresquarepic={}};
+	\pic at (-6,6) {scoresquarepic={20}};
+	\pic at (-5,6) {scoresquarepic={}};
+	\pic at (-4,6) {scoresquarepic={}};
+	\pic at (-3,6) {scoresquarepic={}};
+	\pic at (-2,6) {scoresquarepic={}};
+	\pic at (-1,6) {scoresquarepic={25}};
+	\pic at (0,6) {scoresquarepic={}};
+	\pic at (0,5) {scoresquarepic={}};
+	\pic at (0,4) {scoresquarepic={}};
+	\pic at (-1,4) {scoresquarepic={}};
+	\pic at (-2,4) {scoresquarepic={30}};
+	\pic at (-3,4) {scoresquarepic={}};
+	\pic at (-4,4) {scoresquarepic={}};
+	\pic at (-5,4) {scoresquarepic={}};
+	\pic at (-6,4) {scoresquarepic={}};
+	\pic at (-7,4) {scoresquarepic={35}};
+	\pic at (-8,4) {scoresquarepic={}};
+	\pic at (-9,4) {scoresquarepic={}};
+	\pic at (-9,3) {scoresquarepic={}};
+	\pic at (-9,2) {scoresquarepic={}};	
+	\pic at (-8,2) {scoresquarepic={40}};
+	\pic at (-7,2) {scoresquarepic={}};
+	\pic at (-6,2) {scoresquarepic={}};
+	\pic at (-5,2) {scoresquarepic={}};
+	\pic at (-4,2) {scoresquarepic={}};
+	\pic at (-3,2) {scoresquarepic={45}};
+	\pic at (-2,2) {scoresquarepic={}};
+	\pic at (-1,2) {scoresquarepic={}};
+	\pic at (0,2) {scoresquarepic={}};
+	\pic at (0,1) {scoresquarepic={}};
+	
+
+
+\end{tikzpicture}
+\end{document}

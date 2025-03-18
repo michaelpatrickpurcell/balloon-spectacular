@@ -419,7 +419,8 @@ code={
 }}
 
 
-\tikzset{tilesticker/.pic={%
+\tikzset{pics/tilesticker/.style n args={2}{%
+code={
 		\begin{scope}
 		\clip (-\smallcardwidth/2 - \smallbleed, 0in) --%
 		      (-\smallcardwidth/2 - \smallbleed, \smallcardheight/2 + \smallbleed) --%
@@ -432,8 +433,11 @@ code={
 		% Pattern for card front
 		\node[opacity=0.75] () at (0,0) {\includegraphics[height=\smallcardheight+2\bleed, width=\smallcardwidth+2\bleed]{Images/tile_background.png}};
 
-%		\node[rotate=90] () at (0,0) {\includegraphics[width=\smallcardheight]{Images/solid_#1_rotated.png}};				
+%		\node () at (0,0) {\setmainfont[Scale=5.0]{Fredoka-Bold}\Huge \contour{black}{\textcolor{#2}{#1}}};				
+		\node () at (0,0) {\setmainfont[Scale=5.0]{Fredoka-Bold}\Huge \textcolor{#2}{#1}};		
+		\node () at (0,0) {\setmainfont[Scale=5.0]{Fredoka-Bold}\Huge \textcolor{#2}{#1}};						
+
 		\end{scope}
 		% Cutting guides for corners of the cards	
 %		\pic () at (0,0) {smallcutguide={black}};
-}}
+}}}
